@@ -52,7 +52,7 @@ let maps = [
 
     [
       // world 0 level 1, cave background tile
-      
+
       "==================================",
       "=     =         =     =   =   =0=",
       "=         =     =         =     =",
@@ -125,7 +125,7 @@ let maps = [
     ],
     [
       // world 0 level 3, cave background tile
-      
+
       "=====================================================================================================",
       "=     =   =     =   =   =             =     =     =     =         =   =       =     =       =       =",
       "= === = = = === = === = = = ========= = === = === = = = = ======= = = === === ===== = ======= ===== =",
@@ -192,6 +192,44 @@ let maps = [
     ],
     [
       // world 0 level 5
+      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "r                            kTTTT                               TTTG          kr",
+      "r                             TTTT                               TTT            r",
+      "rTTTTTTTTTTTTTTTT     TTTT    TTTT     TTTTTTTTTTTTTTTTTTTT      TTTk           r",
+      "r           kTTTT     TTTT    TTTT     TTTTTTTTTTTTTTTTTTTT      TTTTTTTTTTTT   r",
+      "r            TTTT     TTTT    TTTT     TTT k    TTTT             TTTTTTTTTTTT   r",
+      "r    TTTTTTTTTTTT     TTTT    TTTT     TTT      TTTT               TTTT   TTT   r",
+      "r                     TTTT    TTTT     TTT      TTTT               TTTT   TTT   r",
+      "r                     TTTT    TTTT     TTT                         TTTT   TTT   r",
+      "rrTTTTTTTTTTTTTTTTTTTTTTTT    TTTT     TTT              TTTT       TTTT   TTT   r",
+      "rrTTTTTTTTTTTTTTTTTTTTTTT     TTTT     TTT              TTTT       TTTT   TTT   r",
+      "r                             TTTT     TTTG            kTTTT       TTTT   TTT   r",
+      "r                   TT        TTTT     TTTTTTTTTTTTTTTTTTTTT       TTTT   TTT   r",
+      "rTTTTTTTTTTTTT      TT                 TTTTTTTTTTTTTTTTTTTTT       TTTT   TTT   r",
+      "rG        kTTT      TT                                    TT       TTTT   TTT   r",
+      "r          TTT      TT                                    TT       TTTT   TTT   r",
+      "r          TTT      TT k                TTTT              TT       TTTT         r",
+      "rk         TTT      TTTTTTTTTTTTTTTTTTTTTTTT              TT       TTTT         r",
+      "rTTT       TTT                                            TT       TTTT         r",
+      "rTTT       TTT          k               +          k      TT       TTTT         r",
+      "rTTT       TTT                                            TT       TTTT   TTTTTTr",
+      "rTTT       TTTTTTT                                        TT       TTTT   TT   Gr",
+      "rTTT       TTTTTTT      TTTT      TTTTTTTTTTTTTTTTTTTTTTTTTT       TTTT   TT    r",
+      "rTTT                    TTTT                                       TTTT   TT    r",
+      "rTTT                    TTTT                                       TTTT   TT    r",
+      "rTTTTTTTTTTTTTTTTT      TTTT                                       TTTT   TT    r",
+      "r              TTT      TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT      TTTT   TT    r",
+      "r              TTT      TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT       TT    TT    r",
+      "r                                                                               r",
+      "rTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT                                              r",
+      "r    k    TTT^^^^^^TT   TTTTTTTTTT            TTTT    TTTTTTTTTTTTTTTTTTTTTTTTTTr",
+      "r k  G  k TTT======TT                         TTTT    TTTTTTTTTTTTTTTTTTTTTTTTTTr",
+      "r         TTT==0===TT                         TTTT                       TTTk  Gr",
+      "r   TTTTTTTTT      TTTTTTTTTTTTTTT            TTTT                       TTT    r",
+      "r   TTTTTTTTT      TTTTTTTTTTTTTTT            TTTTTTTTTTTTTTTTTTTTTT     TTT    r",
+      "r                                             TTTTTTTTTTTTTTTTTTTTTT     TTT    r",
+      "r                                                                               r",
+      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
     ],
     [
       // world 0 level 6
