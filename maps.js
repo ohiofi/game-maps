@@ -194,6 +194,7 @@ let maps = [
       "rrrrrrrrr5rrrrrrrrrrrrrr3rrrrrrrrrrrrr2rrrrrrrrrrrrrr1rrrrrr4rrrrr"
     ],
     [
+      // world 0 level 5, by https://github.com/gersongams
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
       "r                            kTTTT                               TTTG          kr",
       "r                             TTTT                               TTT            r",
@@ -234,7 +235,8 @@ let maps = [
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
     ],
     [
-      "rrrrrrrccrrrrrrrgggggggggtggggggrrrrrrrrrrrrrrrrrrr============T",
+      // world 0 level 6, by https://github.com/Grigory57
+            "rrrrrrrccrrrrrrrgggggggggtggggggrrrrrrrrrrrrrrrrrrr============T",
       "T                                      rrrrrrrrrr           k  r",
       "T rrrrrrrrrrrcccrrrrrrrrrrrrrrrrrrrr               rrrrrrrrrrrrr",
       "T                                            k                  ",
