@@ -235,7 +235,26 @@ let maps = [
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
     ],
     [
-      // world 0 level 6
+      // world 0 level 6, by https://github.com/Grigory57
+            "rrrrrrrccrrrrrrrgggggggggtggggggrrrrrrrrrrrrrrrrrrr============T",
+      "T                                      rrrrrrrrrr           k  r",
+      "T rrrrrrrrrrrcccrrrrrrrrrrrrrrrrrrrr               rrrrrrrrrrrrr",
+      "T                                            k                  ",
+      "G   rrrrrrrrrrrrrrrrrrrrrrrrr1rrrrrrrrrrrrrrr^^^rrrrrrrrrrrrrrrr",
+      "=                                   ggggggg        gggggggg  k  ",
+      "=====rrrrrrrrr=  ==============================  ===========  ==",
+      "0                                                               ",
+      "t   ==========   ccccccccccccccccccccccccccggggggggggT          ",
+      "T   k t gg       g t   k   t     k     T        k    ggTTT      ",
+      "T     t            t      t          t                          ",
+      "T                                          k                    ",
+      "G   rrrrrrrrrrrrrrrrrrrrrrrrr1rrrrrrrrrrrrrrr^^^rrrrrrrrrrrrrrrr",
+      "=                                   ggggggg        gggggggg  k  ",
+      "=====rrrrrrrrr=  ==============================  ===========  ==",
+      "0                                                               ",
+      "t   ==========   ccccccccccccccccccccccccccggggggggggT          ",
+      "T                                                               ",
+      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
     ],
     [
       // world 0 level 7
