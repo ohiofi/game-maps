@@ -259,8 +259,8 @@ let maps = [
     [
       // world 0 level 7
       "ccccccccccccccccccccccccccccccT6Tcccccccccc5cccccccccccccccccccccc",
-      "cTTTgggggggggggggggg       TTT   TTT             ggggggggggggggg c",
-      "cTT                          T   T                               c",
+      "c  Tgggggggggggggggg       TTT   TTT             ggggggggggggggg c",
+      "c                            T   T                               c",
       "cr              ^                   k            ^               c",
       "c        ^bbbbbbbb                               bbbbbbbbb^      c",
       "cr              b                     k           b              c",
