@@ -258,6 +258,32 @@ let maps = [
     ],
     [
       // world 0 level 7
+      "ccccccccccccccccccccccccccccccT6Tcccccccccc5cccccccccccccccccccccc",
+      "c  Tgggggggggggggggg       TTT   TTT             ggggggggggggggg c",
+      "c                            T   T                               c",
+      "cr              ^                   k            ^               c",
+      "c        ^bbbbbbbb                               bbbbbbbbb^      c",
+      "cr              b                     k           b              c",
+      "c               b                                 b              c",
+      "c               b                                 b              c",
+      "cTt             bbbb                           bbbb              c",
+      "crr                 b                          b                 c",
+      "cr                  b                          b                 c",
+      "cr      k           b                          b                 c",
+      "ct                  b                          b                 c",
+      "ctt                 b                          b   T             c",
+      "cttt      k         b                          b                tTc",
+      "crr                                                           rrrc",
+      "ccccccc1ccccccccc                   k            ccccccccc4ccccccc",
+      "                c                                c               c",
+      "                c                           k    c               c",
+      "                c                                c               c",
+      "                2                                3               c",
+      "                c                                c               c",
+      "                c            k                   c               c",
+      "                cgggggggg              ggggggggggc               c",
+      "                cTt         T     T  T         tTc               c",
+      "rrrrrrrrrrcccccccccccccccccccTT8TTcccccccccccccccccccccccrrrrrrrrrr"
     ],
     [
       // world 0 level 8
