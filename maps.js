@@ -13,13 +13,14 @@ t : small tree
 T : big tree
 + : dead tree
 w : water
-0 : door to level 0, the player always spawns at (1,1)
-1 : door to level 1, the player always spawns at (1,1)
-2 : door to level 2, the player always spawns at (1,1)
-3 : door to level 3, etc...
-4 : door to level 4, etc...
-5 : door to level 5, etc...
-6 : door to level 6, etc...
+0 : door to current world level 0, the player always spawns at (1,1)
+1 : door to current world level 1, the player always spawns at (1,1)
+2 : door to current world level 2, the player always spawns at (1,1)
+3 : door to current world level 3, etc...
+4 : door to current world level 4, etc...
+5 : door to current world level 5, etc...
+6 : door to current world level 6, etc...
+① : warp to world 1-0
 
 */
 let maps = [
@@ -28,9 +29,9 @@ let maps = [
     [
       // world 0 level 0, grass background tile
 
-      "rrcccccccccccc+t+ ++T++  +++ ++T+ T+++ ++T+ ^^^==========================",
+      "rrcccccccccccc+t+ ++T++  +++ ++T+ T+++ ++T+ ^^^==============9===①=======",
       "r       gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg             T",
-      "r     k    tvv rvv       +G   G  gGgg G+g   ===          tTtT   TtTTtTt",
+      "r     k    tvv rvv       +G   G  gGgg G+g   ===          tTtT     tTTtTt",
       "r t  t t k  t          +     +              =7=   tT   ttT tTt   tTTtTT",
       "r   t  gt  t+ gr r      + G  gG   G  +       ppp  TtT    TtTt   TTtTtTTtTT",
       " r   t T    ++  t          +    +  T  G   ^^^ gp ttT   ttTTtT  TtTTtTT",
@@ -235,6 +236,7 @@ let maps = [
       "r                                             TTTTTTTTTTTTTTTTTTTTTT     TTT    r",
       "r                                                                               r",
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
+
     ],
     [
       // world 0 level 6, by https://github.com/Grigory57
@@ -264,17 +266,17 @@ let maps = [
       "c  Tgggggggggggggggg       TTT   TTT             ggggggggggggggg c",
       "c                            T   T                               c",
       "cr              ^                   k            ^               c",
-      "c        ^bbbbbbbb                               bbbbbbbbb^      c",
-      "cr              b                     k           b              c",
-      "c               b                                 b              c",
-      "c               b                                 b              c",
-      "cTt             bbbb                           bbbb              c",
-      "crr                 b                          b                 c",
-      "cr                  b                          b                 c",
-      "cr      k           b                          b                 c",
-      "ct                  b                          b                 c",
-      "ctt                 b                          b   T             c",
-      "cttt      k         b                          b                tTc",
+      "c        ^========                               ========^       c",
+      "cr              =                     k           =              c",
+      "c               =                                 =              c",
+      "c               =                                 =              c",
+      "cTt             =====                         =====              c",
+      "crr                 =                         =                  c",
+      "cr                  =                         =                  c",
+      "cr      k           =                         =                  c",
+      "ct                  =                         =                  c",
+      "ctt                 =                         =    T             c",
+      "cttt      k         =                         =                 tTc",
       "crr                                                           rrrc",
       "ccccccc1ccccccccc                   k            ccccccccc4ccccccc",
       "                c                                c               c",
@@ -367,6 +369,29 @@ let maps = [
     // begin world 1
     [
       // world 1 level 0
+      "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "T          T k T k T k T k T k TT",
+      "T     T      T   T   T   T     TT",
+      "T     T                        4 ",
+      "T     TTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "T     T",
+      "T     T",
+      "T     T",
+      "T     TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "T                k                                            T",
+      "T     ++++++++++++                   TTT                      T",
+      "T                +                   TkT                      T",
+      "T                +                   TTT                      T",
+      "T                +++++++++++++++++++++++++++++++++++++++++++++T",
+      "T                                                             T",
+      "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT TTTTTTTTT",
+      "T                                                             T",
+      "TTTTTTTTTTTT      TTT       TTTTTTT    TTT      TTTT         kT",
+      "T  1 T     T      TTT       TTT        TTT      TTTT        kT",
+      "T    T     T      TTT       TTT        TTT      TTTT         kT",
+      "T                 TTT       TTT        TTT1     TTTTk k k k k T",
+      "TTTTTTTTTTTTTTTTTTTTT   k   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
     ],
     [
       // world 1 level 1
