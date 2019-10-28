@@ -1,16 +1,18 @@
 /*
 
 MAP SYMBOLS:
-r : rock
+= : brick
 c : cliff
 g : tall grass
 G : gravestone/tombstone
+k : kitty
+p : path/cobblestone
+r : rock
+^ : roof shingles
 t : small tree
 T : big tree
 + : dead tree
-k : kitty
-^ : roof shingles
-= : brick
+w : water
 0 : door to level 0, the player always spawns at (1,1)
 1 : door to level 1, the player always spawns at (1,1)
 2 : door to level 2, the player always spawns at (1,1)
@@ -26,36 +28,36 @@ let maps = [
     [
       // world 0 level 0, grass background tile
 
-      "rrcccccccccccc+t+ ++T++  +++ ++T+ T+++ ++T+",
-      "r       gT  ++   +Tg   ++T  +    + gT +  gr+",
-      "r     k    tvv rvv       +G   G  gGgg G+g t",
-      "r t  t t k  t          +     +           t",
-      "r   t  gt  t+ gr r      + G  gG   G  +    +",
-      " r   t T    ++  t          +    +  T  G   ^^^ ",
-      "r  t    t  gt gr         g+gg G  +Gg  +g ^^^^^",
-      "r t t^   +   gT               g+     +  g=0=0=",
-      "r   ^^^     gt r      gTg  + gG + G     t=====",
-      "r T^^^^^   ^^^         ^^^              g==6==",
-      "r t=0=0=  ^^^^^r     g^^^^^    ^^^     gr   t",
-      "r t=====  =====    rrr=====rg ^^^^^        + g",
-      "r  =1===  ==2==r r rrr==4==g  =====g   t    t",
-      "r        g      cccc3ccc      ==5==          T    gr",
-      "gcccccccccccccc      g     g  tg t Tgt     gt",
-      "t   g  T         g          +t  gt+   Tg  tg t +t   Tg",
-      " t           T         gr     g++g  t   tgtg  tg t",
-      "t                         t+g t gt gtgt  gt       T",
-      " Tg     Tg              tg  +tg t gT    gT     Tg tg",
-      " r                          gt    +t gt  gtT g+ Tg t",
-      "T                 Tg   gg   Tg       t+           gT",
-      " t           gg                     T       T     t",
-      " gt         T                  tg T  gT   T      t",
-      "g  tcccc ccc ccccc   gTrrg  t    t   +++T      gT+",
-      " g  TrrTT    T +T cccc   +++ +++t +++   +++++T++"
+      "rrcccccccccccc+t+ ++T++  +++ ++T+ T+++ ++T+ ^^^==========================",
+      "r       gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg             T",
+      "r     k    tvv rvv       +G   G  gGgg G+g   ===          tTtT   TtTTtTt",
+      "r t  t t k  t          +     +              =7=   tT   ttT tTt   tTTtTT",
+      "r   t  gt  t+ gr r      + G  gG   G  +       ppp  TtT    TtTt   TTtTtTTtTT",
+      " r   t T    ++  t          +    +  T  G   ^^^ gp ttT   ttTTtT  TtTTtTT",
+      "r  t    t  gt gr         g+gg G  +Gg  +g ^^^^^ p TtTt    ^^^   tTtTTtTT",
+      "r t t^   +   gT               g+     +  g=0=0= p  t tT   ^^^    tTt",
+      "r   ^^^     gt r      gTg  + gG + G     t===== p tTT     ===    TTtTt",
+      "r  ^^^^^   ^^^         ^^^              t==6== p  TtT    =8=   TtTt",
+      "r  =0=0=  ^^^^^r     g^^^^^    ^^^     gr  ppppp   tTTt  pp T   TtTT",
+      "r T=====  =====    rrr=====rg ^^^^^        +gg pg  Tt  ppp tTTT   tTtTt",
+      "r T=1===  ==2==r   rrr==4==g  =====g   t    t  p  TTtTtp  TTtTTtT   tTT",
+      "r   pppppppppppppccc3cccpppp  ==5==          T pp grT  pTtTtTTt    TT",
+      "gccccccccccccccgpppppppppggp  tgpt Tgt     gt   p  TTTtp  TtTTtTt   TtTT",
+      "t   g  T         gg gg     p+tpppt+   Tg  tg tggpppppppp tTtT+T TtTTtT",
+      " t           T         gr  pppp++g  t   tgtg   g gtgtgtTtTTtTTtTtTtT",
+      "t                         t+g t gt gtgt  gt  +   TTTtTtT+T TtTTtTtTTtTtTTtT",
+      " Tg     Tg              tg  +tg t gT    gT     Tg T+T TtTtgTtTtTtTtT+T T",
+      " r                          gt    +t gt  gtT g+ Tg tTTtTtTTtTtT+T TtTTtT",
+      "T                 Tg   gg   Tg       t+           gT+T TtTTtTtTtTtTTtTtT",
+      " t           gg                     T       T     tT tTTtT tTTtTtTtTTtT",
+      " gt         T                  tg T  gT   T      TTtTtTTtTtTTtTtTtTTtT",
+      "g  tcccc ccc ccccc   gTrrg  t    t   +++T      gT+TTtTtTTtTtTTtTtTTtTTtT",
+      " g  TrrTT    T +T cccc   +++ +++t +++   +++++T++tTtT+T TT+T TtTTtTTT tTTT"
     ],
 
     [
       // world 0 level 1, cave background tile
-      
+
       "==================================",
       "=     =         =     =   =   =0=",
       "=         =     =         =     =",
@@ -76,59 +78,59 @@ let maps = [
       "=     =         =     =         =",
       "=         =     =         =     =",
       "=     =   =     =     =   =     =",
-      "==================================",
+      "=================================="
     ],
     [
       // world 0 level 2, sand background tile
 
-      " ====================================r============",
-      "=                        r            r           =",
-      "========= r===========r =========== r=  ==========",
-      "=                                                 =",
-      "=== ======r===== =================== ==r =========",
-      "=        r  r    r r    r             r   r    r",
-      "=          r     r  r    r   r r r r  r   r    r",
-      "=         r     r r    r             r   r    r",
-      "==+  +== r  r  r     r    r r r r r rr   r  r   r",
-      "=+  +==   r  r r   r                  r   r  r   r",
-      "==+  +==   r r  r   r rr   r r rr   r  r   r  r   r",
-      "==+  +==  r   r  r   r   r  r r  r  r   r   r  =   r",
-      "==+  +==   r =  r   r rr   r r rr   r  r   r  ===   r",
-      "==+  +==  r ===  r   r   r  r r  r  r   r  r =====   r",
-      "=+  +==    =====  r  r   r r     r    r  r  =======   r",
-      "==+  +==  =======  r r  r r   r   r   r  r             r",
-      "=+  +==    r r  r r  r   r   r r   r   r  r    r  r   r",
-      "==+  +==r r r  r   r  r r   r   r   r   r  r    r  r r",
-      "=+  +====  r r  r  r   r   r   r r   r   r  r    r    r",
-      "+    +====r   r r   r r   r   r   r   r   r  r    r  r",
-      "= =========r r   rr  r   r   r  =  r   r   r  r  r   r",
-      "+   +=====r   r    r  r     r  ===  r    r   r  r   r",
-      "==+  +===  r r r  r    r   r  =====  r  r   r  r   r",
-      "=+  +===  r  r  r  r   r  r  =======   r r r  r     r",
-      "==+  +==   r  r  r  r  r r  ====3====rr  r  r    r   r",
-      "=+  +===  r  r  r  r  rr  r  r      r      r    r   r",
-      "==+  +== r    r  rr  r  r  r  r    r    r r    r   r",
-      "=+  +===  r  r  r  r  r  r  r     rr r r   r  r   r",
-      "==+  +== r    r  r  r r  r   rr rr  r   r r    r   r",
-      "=+  +===  r  r  r  r   r  rr   r   r r r   r  r     r",
-      "==+  +== r    r  rr   r   r rr  r  r   r  r    r   =",
-      "=+  +===  r  r  r  =   r   r  r  r  r      r  r   ===",
-      "==+  +== r  r  r  ===   r   r  r   r   rr r  r   =====",
-      "=+  +==   r   r  =====   r   r  r r   r  r  r   =======",
-      "==+  +== r   r  =======   r   r r  r   r  r  r   r",
-      "=+  +==   r r   r    r   r  r r   r   r  r  r   r",
-      "==+  +== r   r   r    r    r     r   r  r  r   r",
-      "==        r   r   r    rrrr rrrrr  rr  r  r   r",
-      "===          r     r       r     rr   r  r   r",
-      "==== ========= ========= === ======r  r= =============",
-      "===                                  r             ===",
-      "=1================================r=  r====== ======2=",
-      "=                                                    =",
-      " ==================================r===r=============",
+      " ====================================r=============",
+      "=                        r+           r            =",
+      " ======== r===========r =========== r=   ==========",
+      "=                                                 +=",
+      " == ======r===== =================== ==r  =========",
+      "=        r  +    r r    r             r   r    r",
+      "=          r     r  +    r   r r rrr r  +   r    r",
+      "=         r     r r    r               r   r    r",
+      "==+  +== r  +  r     r    r r r r r r  +   r  +   r",
+      "=+  +==   r  + r   r             r   r  r   r  r   r",
+      "==+  +==   r r  +   r rr   r r r  +   r  +   r  r   r",
+      "==+  +==  r   r  +   r   r  r r r  +  r   r   r  =   r",
+      "==+  +==   r =  r   r rr   r r r r    r  +   r  ===   r",
+      "==+  +==  r ===  r   r   r  + r   r   r   r  + =====   r",
+      "=+  +==    =====  r  +   r r       r   r   r  =======   r",
+      "==+  +==  =======  r r  + r   r     r   r  r +           r",
+      "=+  +==    r r  + r  +   r   r r r   r   r  +    r  +   r",
+      "==+  +==r r r  +   r  r r   r   r r   r   r  r    r  + r",
+      "=+  +====  r r  r  +   r   r   r   r   r   r  +    r    r",
+      "+    +====r   r r   r r   r   r  =  r   r   r  +    r  +",
+      "= =========r r   rr  +   r   r  ===  r   r   r  r  r   r",
+      "+   +=====r   r    r  +     r  =====  r   r    r  r   r",
+      "==+  +===  r r r  +    r   r  =======  r  +   r  +   r",
+      "=+  +===  r  +  r  +   r  +  =========   r r r  +     r",
+      "==+  +==   r  r  r  +  r r  =====3=====rr  +  r    r   r",
+      "=+  +===  r  +  r  +  rr  +  r      + r      r    r   r",
+      "==+  +== r    r  +r  +  r  +  r      +    r r    r   r",
+      "=+  +===  r  +  r  +  r  +  r       rr r r   r  +   r",
+      "==+  +== r    r  +  r r  r   rr r  +  r   r r    r   r",
+      "=+  +===  r  +  r  +   r  +r   r rr  + r r   r  +     r",
+      "==+  +== r    r  +r   r   r rr  +    r   r  +    r   =",
+      "=+  +===  r  +  r  =   r   r  +  r r  +      r  +   ===",
+      "==+  +== r  +  r  ===   r   r  +  r  +   rr r  +   =====",
+      "=+  +==   r   r  =====   r   r  r   r   r  +  r   =======",
+      "==+  +== r   r  =======   r   r  +   r   r  +  r   r",
+      "=+  +==   r r   r    r + r  + r     r   r  +  r   r",
+      "==+  +== r   r   r    +    r     rrr   r  +  r   r",
+      "==        r   r   r    rrrr rrrrr    rr  +  r   r",
+      "===          r     r       r        r   r  +   r",
+      "==== ========= ========= === ======r  +=  =============",
+      "===                                  r              ===",
+      "=1================================r=  r======  ======2=",
+      "=                                                     =",
+      " ==================================r===r=============="
     ],
     [
       // world 0 level 3, cave background tile
-      
+
       "=====================================================================================================",
       "=     =   =     =   =   =             =     =     =     =         =   =       =     =       =       =",
       "= === = = = === = === = = = ========= = === = === = = = = ======= = = === === ===== = ======= ===== =",
@@ -227,7 +229,7 @@ let maps = [
       "rTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT                                              r",
       "r    k    TTT^^^^^^TT   TTTTTTTTTT            TTTT    TTTTTTTTTTTTTTTTTTTTTTTTTTr",
       "r k  G  k TTT======TT                         TTTT    TTTTTTTTTTTTTTTTTTTTTTTTTTr",
-      "r         TTT==0===TT                         TTTT                       TTTk  Gr",
+      "r         TTT==6===TT                         TTTT                       TTTk  Gr",
       "r   TTTTTTTTT      TTTTTTTTTTTTTTT            TTTT                       TTT    r",
       "r   TTTTTTTTT      TTTTTTTTTTTTTTT            TTTTTTTTTTTTTTTTTTTTTT     TTT    r",
       "r                                             TTTTTTTTTTTTTTTTTTTTTT     TTT    r",
@@ -236,28 +238,28 @@ let maps = [
     ],
     [
       // world 0 level 6, by https://github.com/Grigory57
-            "rrrrrrrccrrrrrrrgggggggggtggggggrrrrrrrrrrrrrrrrrrr============T",
+      "rrrrrrrccrrrrrrrTTTTTTTTtTTTTTTrrrrrrrrrrrrrrrrrrr============T",
       "T                                      rrrrrrrrrr           k  r",
-      "T rrrrrrrrrrrcccrrrrrrrrrrrrrrrrrrrr               rrrrrrrrrrrrr",
-      "T                                            k                  ",
-      "G   rrrrrrrrrrrrrrrrrrrrrrrrr1rrrrrrrrrrrrrrr^^^rrrrrrrrrrrrrrrr",
-      "=                                   ggggggg        gggggggg  k  ",
-      "=====rrrrrrrrr=  ==============================  ===========  ==",
-      "0                                                               ",
-      "t   ==========   ccccccccccccccccccccccccccggggggggggT          ",
-      "T   k t gg       g t   k   t     k     T        k    ggTTT      ",
-      "T     t            t      t          t                          ",
-      "T                                          k                    ",
-      "G   rrrrrrrrrrrrrrrrrrrrrrrrr1rrrrrrrrrrrrrrr^^^rrrrrrrrrrrrrrrr",
-      "=                                   ggggggg        gggggggg  k  ",
-      "=====rrrrrrrrr=  ==============================  ===========  ==",
-      "0                                                               ",
-      "t   ==========   ccccccccccccccccccccccccccggggggggggT          ",
-      "T                                                               ",
+      "T   rrrrrrrrrcccrrrrrrrrrrrrrrrrrrrr               rrrrrrrrrrrrr",
+      "T                                           k^^^                T",
+      "G   rrrrrrrrrrrrrrrrrrrrrrrrr1rrrrrrrrrrrrrrr^^^rrrrrrrrrrrrr  r",
+      "=                                   ggggggg  ===   gggggggg  k  T",
+      "=====rrrrrrrrr=============================  =5=  ==============",
+      "0                                                               T",
+      "t   ==========   ccccccccccccccccccccccccccggggggggggT         T",
+      "T   k t gg       g t   k   t     k     T        k    ggTTT      T",
+      "T     t            t      t          t                         T",
+      "T                                          k ^^^                T",
+      "G   rrrrrrrrrrrrrrrrrrrrrrrrr1rrrrrrrrrrrrr  ^^^rrrrrrrrrrrrrrrr",
+      "=                                   ggggggg  ===   gggggggg  k  T",
+      "=====rrrrrrrrr=  =============================7=  ==========  ==",
+      "0                                                               T",
+      "t   ==========ccccccccccccccccccccccccccggggggggggT            T",
+      "T                                                               T",
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
     ],
-    [
-      // world 0 level 7
+        [
+      // world 0 level 7, by https://github.com/GudeTamma
       "ccccccccccccccccccccccccccccccT6Tcccccccccc5cccccccccccccccccccccc",
       "c  Tgggggggggggggggg       TTT   TTT             ggggggggggggggg c",
       "c                            T   T                               c",
@@ -286,6 +288,7 @@ let maps = [
       "rrrrrrrrrrcccccccccccccccccccTT8TTcccccccccccccccccccccccrrrrrrrrrr"
     ],
     [
+      // world 0 level 8
       // world 0 level 8 sand background tile, by https://github com/ejilee
       "=====================================^^^^^^^========^^^=======gg   ",
       "=    gtT T gT tT ttTttT r Tgrrrrr ttT=======Tgtggggt===gTkTrTrtt   ",
@@ -329,7 +332,36 @@ let maps = [
     ],
     [
       // world 0 level 9
+      "TTtTT+T TtT+T tTtTtT tT+TtT+TtT+TtT+T   tTTt^^^   ^^^ccctT+TtT+TtTt T+TtT+TtT tT",
+      "t     T+TtT+TtTtTTtT+T tT+TtTT       TtT    ^^^   ^^^   T          tT tTTtT tT+TtT+TtT+TtT tT+TT tT tTTtT+TtT tTtT+TtT tT",
+      "t     tTT   tT+TtTTtT+TtTTtTT               ===^^^===     ^^^^^^^^     TtT+TtTT tTtTtT tT+TtT+TtT+TtT+T tT+TtT+TtT+TtT+T tT+TtT+TtTtT",
+      "Tt     Ttt T  TtT+TtT+TTtTtT                =0=^^^=0=     ==0===0=            TtT+T tT+TtT+TtTT tT tTTtT tT+TtT+TtT+TtT tTTtT tTTtT+TtT tTtT+TtT tT",
+      "TT     T  TtTtTTtT+T tT+TtT                 =========     ====8===              TTtTT tT tTTtT tT+TtT+TtT+TtT tT+TT tT tTTtT+TtT tTtT+TtT tT",
+      "T     TtT  TT tT+TtT+TtT+Tt              ^^^=0=0=0=0=^^^      ppppppppppppppppppppppppppppppppppppppppppppppppp tT+T tT+TtT+TtT+TtT+T tT+TtT+TtTtT",
+      "t      TT TTtTTtT+TTt   Tt   ^^^^^^^^    ^^^=========^^^      p         TtT     tTt  TtT  T tT tTTtT tT+TtT   g    T+TtT tTTtT tTTtT+TtT tTtT+TtT tT",
+      "T      TtT tT   TtTtTTtT+T   =0===0==    =0==0==7==0==0=      p               tTtTTtT+TtTTTtT tTTtT tTT T tt     g  T TTtT tT+TT tT tTTtT+TtT tTtT+TtT tT",
+      "TT     tTTtTTt T  TTtT+T=    ===6====    =======7=======      p             TTtT+TtT+TtTT tTtTtT tTtTtT tTT TtT    gg    g      tT+TtT+T tT+TtT+TtTtT",
+      "t     TtT  TTtT+TtTtT+T=        p       =      kp    k  =     p          T+TtTtTTtT+T tTT               +  tTTtt gg    gG G GgG+GTG G  TtT tTTtT tTTtT+TtT tTtT+TtT tT",
+      "t=   =TTtTrt   TtTTt  T=        p        = k    p      =      p       TTtT tTTtT+T tT+T   ^        t+      +  TTt  gg +   g    g   gg   ttTTtT tTTtT+TtT tTtT+TtT tT",
+      "T=   =tT   TtT+Tt   T+T=        p       T ===== p ===== T     p    T+TtT+TtTT tTtttT+Tt  ^^^        Tt   +      +      G gG  G  G  G  G  g  TtT+TtT+T tT+TtT+TtTtT",
+      "t=   =T tT+TtTtT TtT+TT=  T     p               p             p TtTT tT+TtT+T tT tTTtTt ^^^^^        tT      +T  +  g+       gg  + g   + gg tT+TtT tTtT+TtT tT",
+      "T=    =================         ppppppppppppppppppppppppppppppp+TtT+TtTT tTTtT tT+TtT+T =====         TtT  +      T+G G G+G G G G G Gg   +  TtT tTtT+TtT tT",
+      "T=                                                        TtT+TtTT tTtTtT+TtT+TtT+TtT+T =0=0=          TTtT   +   g    +   +    g   + gg   TT tT+TtT+TtTtT",
+      "T=                                   t  tTTtTT tTtT  T+TtTTtT+TtTTtT+TTtT+TtT+TtTTtTTtT =====          tTtTtt  g +   G  G  G  G  G+G   +  tT+TtT+TtT+T tT+TtT+TtT+TtT+T tT+TtT+TtTtT",
+      "tT==================================T tTtT+TtT+TTtTtTTtT+T tT+TtT+T tT tTTtT tT+TtTTtTT =0=0=          TtTTtT+T    g  gg   +  g  7   g   tT tTTtT+TtT tTtT+TtT tT",
+      "tTTtTT tT  TtT  tTT  +TtT   +TtT  tTT tTtTtT tT+TtT+TtT+TtT+TtttT+TtT+TtT+T+T T+TtT+TTt =====          tTtTtTTtTT  +g G G G G G+G Gg    TTtT+TtTtTtT",
+      "TTtT+TTtT+TtT tTtTtT tT+TtT+TtT+TtT+T   tTTt   ccctT+TtT+TtTTtT+TtTTtT+TtTTtT+TtT+TtTTtT==①==         T+TtTTtTtTTtt  +   gg  +   g    TTtT+TTtT+TtT tT",
+      "TtT+TtTTtT+TtTTtT+TtT+TtTT tTtTtTTtTT tTtTTtT+TtTTtT+TtT+TtT+TtTT tTtTtT tT+TtT+TtT+TtTT            TtT+TtTtTTtT+T tT    G  G  G    tTTtT+TtT tT+TtT+T+T T+TtTTtT+TtTTtT+TtTtTtT",
+      "tTtT+TtTTtT+TtT+TtTT tTtTtTTtTT tTtTTtT+TtTTtT+TtTTtT+TtT+TtTT tTtTtT tT+TtT+TtT+TtT+T tTT        TtT+TtTTtT+TtTT tTTtT++        TtTtT+TtTTtT+TtTtTtT",
+      "TtT+TtTTtT+TtTTtT+TtT+TtTT tTtTtTTtTT tTtTTtT+TtTTtT+TtTTtT+TtT+TtTT tTtTtT tT+TtT+TtT+TtT+T tT+TtT+TtT+TtT+T+T T+TtTTtT+T tT tTTtT tT+TtT+T+T T+TtTTtT+TtTTtT+TtTtTtT",
+      "tTtT+T TTtT+T TTtT+T TtT+TT tTtTtTTtTT tTtTTtT+T TTtT+T TTtT+tT+TT tTtTtT tT+T TtT+TtT+TTTtTtT+T+T TTT+T TtT+TTtT+T TTTT+T T tT+T TTT+T TtT+TTtT+T TTtT+T TtTtT",
+      "tT tTTtT+T TT tTtTtTTtTT tTtTTtT+T TTtT+T TTtT+T TtT+TT tTtTtT tT+T TtT+TtT+TTT tT+T TtT+TtT+TTT+T TtT+TTtT+T TTtT+T T tT+T TTT+T TtT+TTtT+T TTtT+T TtTtT",
+      "T tT+T TTtTTtTtTTtT+T TtT+TT tTtTtTTtTTttttTtTTtT+T TTtT+T TTtT+T TtT+TT tTtTtT tT+T TtT+T+T TTT tT+T TtT+T+T TTT+T TtT+TTtT+T TTtT+T T tT+T TTT+T TtT+TTtT+T TTtT+T TtTtT",
+      "TtT tTT tTTtTtTTtTTtT+T TtT+TT tTtTTTtT+T TTtT+T TTtT+T TtT+TT tTtTtT tT+T TtT+T+T TTT tT+T TtT+T+T TTT+T TtT+TTtT+T TTtT+T T tT+T TTT+T TtT+TTtT+T TTtT+T TtTtT",
+      "TtTtTtTtTT tTTtTtTTtTTtTtT+T TT tTtTtTtTTtT+T TTtT+T TTtT+T TtT+TT tTtTtT tT+T TtT+T+T TTT tT+T TtT+T+T TTT+T TtT+TTtT+T TTtT+T T tT+T TTT+T TtT+TTtT+T TTtT+T TtTtT",
+      "TtTtTtTtTTtTtTtTtTTtTtTTtTtTtTtTT tTtTtTTtTT tTtTTtT+T TTtT+T TTtT+T TtT+TT tTtTtT tT+T TtT+T+T TTT tT+T TtT+T+T TTT+T TtT+TTtT+T TTtT+T T tT+T TTT+T TtT+TTtT+T TTtT+T TtTtT"
     ]
+ 
   ], // end world 0
   [
     // begin world 1
