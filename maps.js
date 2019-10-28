@@ -43,13 +43,13 @@ let maps = [
       "r   ^^^     gt r      gTg  + gG + G     t===== p tTT     ===    TTtTt",
       "r  ^^^^^   ^^^         ^^^              t==6== p  TtT    =8=   TtTt",
       "r  =0=0=  ^^^^^r     g^^^^^    ^^^     gr  ppppp   tTTt  pp T   TtTT",
-      "r T=====  =====    rrr=====rg ^^^^^        +gg pg  Tt  ppp tTTT   tTtTt",
-      "r T=1===  ==2==r   rrr==4==g  =====g   t    t  p  TTtTtp  TTtTTtT   tTT",
-      "r   pppppppppppppccc3cccpppp  ==5==          T pp grT  pTtTtTTt    TT",
-      "gccccccccccccccgpppppppppggp  tgpt Tgt     gt   p  TTTtp  TtTTtTt   TtTT",
-      "t   g  T         gg gg     p+tpppt+   Tg  tg tggpppppppp tTtT+T TtTTtT",
-      " t           T         gr  pppp++g  t   tgtg   g gtgtgtTtTTtTTtTtTtT",
-      "t                         t+g t gt gtgt  gt  +   TTTtTtT+T TtTTtTtTTtTtTTtT",
+      "r T=====  =====    rr =====rg ^^^^^        +gg pg  Tt  ppp tTTT   tTtTt",
+      "r T=1===  ==2==r  rccc==4==T  =====g   t    t  p  TTtTtp  TTtTTtT   tTT",
+      "r   ppppppppppppprcc3ccrp     ==5==          T pp grT  pTtTtTTt    TT",
+      "gccccccccccccccgpppppppppgg   tgpt Tgt  ppppt   p  TTTtp  TtTTtTt   TtTT",
+      "t   g  T         gg gg  pppp+tppppppppppp tpptggpppppppp tTtT+T TtTTtT",
+      " t           T         gr  pppp++g  t   tg gpppppgtgtgtTtTTtTTtTtTtT",
+      "t                         t+g t gt gtgt  gT  +   T   TtT+T TtTTtTtTTtTtTTtT",
       " Tg     Tg              tg  +tg t gT    gT     Tg T+T TtTtgTtTtTtTtT+T T",
       " r                          gt    +t gt  gtT g+ Tg tTTtTtTTtTtT+T TtTTtT",
       "T                 Tg   gg   Tg       t+           gT+T TtTTtTtTtTtTTtTtT",
@@ -264,9 +264,9 @@ let maps = [
     ],
     [
       // world 0 level 7, by https://github.com/GudeTamma
-      "ccccccccccccccccccccccccccT6Tccccccc5cccccccccccccccc",
-      "c  Tgggggggggggggggg   TTT   TTT     gggggggggggggggc",
-      "c                        T   T                      c",
+      "cccccccccccccccccccccccccT6Tcccccccc5cccccccccccccccc",
+      "c  Tgggggggggggggggg  TTT   TTT      gggggggggggggggc",
+      "c                       T   T                       c",
       "cr              ^           k        ^              c",
       "c        ^========                  ========^       c",
       "cr              =             k      =              c",
@@ -280,16 +280,16 @@ let maps = [
       "ctt                 =            =    T             c",
       "cttt      k         =            =                tTc",
       "crr                                              rrrc",
-      "ccccccc1ccccccccc           k       ccccccccc4ccccccc",
-      "                c                   c               c",
-      "                c                   c               c",
-      "                c                   c               c",
-      "                2                   3               c",
-      "                c                   c               c",
-      "                c        k          c               c",
-      "                cggggg       gggggc                 c",
-      "                cTt   T     T  T       tTc          c",
-      "rrrrrrrrrrcccccccccccccTT8TTccccccccccccccccrrrrrrrrr"
+      "ccccccc1ccccccccc           k        ccccccccc4cccccc",
+      "                c                    c              c",
+      "                c                    c              c",
+      "                c                    c              c",
+      "                2                    3              c",
+      "                c                    c              c",
+      "                c        k           c              c",
+      "                cggggg         ggggggc              c",
+      "                cTt    T     T  T  tTc              c",
+      "rrrrrrrrrrccccccccccccccTT8TTcccccccccccccccccrrrrrrr"
     ],
     [
       // world 0 level 8
@@ -311,13 +311,13 @@ let maps = [
       "====ggg g g p  =====33=   trr p rrt          ppppppppp  g rTr gTTg+",
       "====gg^ggg  p        p   Twww p wwwT     r   p           gttTTtTt +",
       "=00=g^^^g g pppppppppp  twww     wwwt   k    p        g rggTT T+ + ",
-      "=00=^^^^^g  p          gwww  g g  www        p      ^^^^^+t tT+T+ +",
+      "=00=^^^^^g  p          gwwwg r r gwww        p      ^^^^^+t tT+T+ +",
       "====^^^^^^g p           www   k   www        pg g  ^^^^^^^+TTg tT  ",
       "==========  p         ggwwwg k k gwwwg   g   p     =======rTT+tTTt ",
-      "==========  p   g T gggt+wwwg   gwww+tgg gT gppg g =======tgTgTT T ",
-      "=====444==g p    gggtgT+++www   www+++Tgtggg  pp  g==555==tTgTtT+rt",
-      "=====444==g p  g gtrTr+++++rr999rr+++++trrtgg gppgg==555==TgTtT+gT ",
-      "rr    p     p       rrcccccccc ccccccccTTTgg    ppppppppgtT+tTT t+T",
+      "==========  p   g T gggt+www w w www+tgg gT gppg g =======tgTgTT T ",
+      "=====444==g p    gggtgT+++wwwwwwwww+++Tgtggg  pp  g==555==tTgTtT+rt",
+      "=====444==g p  g gtrTr+++++rrcccrr+++++trrtgg gppgg==555==TgTtT+gT ",
+      "rr    p     p       rrcccccccc9ccccccccTTTgg    ppppppppgtT+tTT t+T",
       "r T k ppppppp      r  rccccccc  cccccccrTg          g gggtTgTT T   ",
       "r           p        r  rcccccc  cccccTtgg   ^^       gktTgTtT+  gr",
       "rrrr      r p             cccccc    cctgg   ^^^^     g gggTtT+TTr T",
@@ -347,13 +347,13 @@ let maps = [
       "TT     tTTtTTt T  TTtT+T=    ===6====    =======7=======      p             TTtT+TtT+TtTT tTtTtT tTtTtT tTT TtT    gg    g      tT+TtT+T tT+TtT+TtTtT",
       "t     TtT  TTtT+TtTtT+T=        p       =      kp    k  =     p          T+TtTtTTtT+T tTT               +  tTTtt gg    gG G GgG+GTG G  TtT tTTtT tTTtT+TtT tTtT+TtT tT",
       "t=   =TTtTrt   TtTTt  T=        p        = k    p      =      p       TTtT tTTtT+T tT+T   ^        t+      +  TTt  gg +   g    g   gg   ttTTtT tTTtT+TtT tTtT+TtT tT",
-      "T=   =tT   TtT+Tt   T+T=        p       T ===== p ===== T     p    T+TtT+TtTT tTtttT+Tt  ^^^        Tt   +      +      G gG  G  G  G  G  g  TtT+TtT+T tT+TtT+TtTtT",
-      "t=   =T tT+TtTtT TtT+TT=  T     p               p             p TtTT tT+TtT+T tT tTTtTt ^^^^^        tT      +T  +  g+       gg  + g   + gg tT+TtT tTtT+TtT tT",
-      "T=    =================         ppppppppppppppppppppppppppppppp+TtT+TtTT tTTtT tT+TtT+T =====         TtT  +      T+G G G+G G G G G Gg   +  TtT tTtT+TtT tT",
-      "T=                                                        TtT+TtTT tTtTtT+TtT+TtT+TtT+T =0=0=          TTtT   +   g    +   +    g   + gg   TT tT+TtT+TtTtT",
-      "T=                                   t  tTTtTT tTtT  T+TtTTtT+TtTTtT+TTtT+TtT+TtTTtTTtT =====          tTtTtt  g +   G  G  G  G  G+G   +  tT+TtT+TtT+T tT+TtT+TtT+TtT+T tT+TtT+TtTtT",
-      "tT==================================T tTtT+TtT+TTtTtTTtT+T tT+TtT+T tT tTTtT tT+TtTTtTT =0=0=          TtTTtT+T    g  gg   +  g  7   g   tT tTTtT+TtT tTtT+TtT tT",
-      "tTTtTT tT  TtT  tTT  +TtT   +TtT  tTT tTtTtT tT+TtT+TtT+TtT+TtttT+TtT+TtT+T+T T+TtT+TTt =====          tTtTtTTtTT  +g G G G G G+G Gg    TTtT+TtTtTtT",
+      "T=   =tT   TtT+Tt   T+T=        p       T ===== p ===== T     p    T+TtT+TtTT tTtttT+    ^^^        Tt   +      +      G gG  G  G  G  G  g  TtT+TtT+T tT+TtT+TtTtT",
+      "t=   =T tT+TtTtT TtT+TT=  T     p               p             p TtTT tT+TtT+T tT tTT    ^^^^^        tT      +T  +  g+       gg  + g   + gg tT+TtT tTtT+TtT tT",
+      "T=    =================         ppppppppppppppppppppppppppppppp+TtT+TtTT tTTtT tT+T     =====         TtT  +      T+G G G+G G G G G Gg   +  TtT tTtT+TtT tT",
+      "T=                                                        TtT+TtTT tTtTtT+TtT+TtT+      =0=0=          TTtT   +   g    +   +    g   + gg   TT tT+TtT+TtTtT",
+      "T=                                   t  tTTtTT tTtT  T+TtTTtT+TtTTtT+TTtT+TtT+TtTT      =====          tTtTtt  g +   G  G  G  G  G+G   +  tT+TtT+TtT+T tT+TtT+TtT+TtT+T tT+TtT+TtTtT",
+      "tT==================================T tTtT+TtT+TTtTtTTtT+T tT+TtT+T tT tTTtT tT+TtTT    =0=0=          TtTTtT+T    g  gg   +  g  7   g   tT tTTtT+TtT tTtT+TtT tT",
+      "tTTtTT tT  TtT  tTT  +TtT   +TtT  tTT tTtTtT tT+TtT+TtT+TtT+TtttT+TtT+TtT+T+T T+TtT+TT  =====          tTtTtTTtTT  +g G G G G G+G Gg    TTtT+TtTtTtT",
       "TTtT+TTtT+TtT tTtTtT tT+TtT+TtT+TtT+T   tTTt   ccctT+TtT+TtTTtT+TtTTtT+TtTTtT+TtT+TtTTtT==①==         T+TtTTtTtTTtt  +   gg  +   g    TTtT+TTtT+TtT tT",
       "TtT+TtTTtT+TtTTtT+TtT+TtTT tTtTtTTtTT tTtTTtT+TtTTtT+TtT+TtT+TtTT tTtTtT tT+TtT+TtT+TtTT            TtT+TtTtTTtT+T tT    G  G  G    tTTtT+TtT tT+TtT+T+T T+TtTTtT+TtTTtT+TtTtTtT",
       "tTtT+TtTTtT+TtT+TtTT tTtTtTTtTT tTtTTtT+TtTTtT+TtTTtT+TtT+TtTT tTtTtT tT+TtT+TtT+TtT+T tTT        TtT+TtTTtT+TtTT tTTtT++        TtTtT+TtTTtT+TtTtTtT",
@@ -421,5 +421,65 @@ let maps = [
     [
       // world 1 level 9
     ]
-  ] // end world 1
+  ], // end world 1
+  [
+    // begin world 2
+    [
+      // world 2 level 1
+    ],
+    [
+      // world 2 level 2
+    ],
+    [
+      // world 2 level 3
+    ],
+    [
+      // world 2 level 4
+    ],
+    [
+      // world 2 level 5
+    ],
+    [
+      // world 2 level 6
+    ],
+    [
+      // world 2 level 7
+    ],
+    [
+      // world 2 level 8
+    ],
+    [
+      // world 2 level 9
+    ]
+  ], // end world 2
+  [
+    // begin world 3
+    [
+      // world 3 level 1
+    ],
+    [
+      // world 3 level 2
+    ],
+    [
+      // world 3 level 3
+    ],
+    [
+      // world 3 level 4
+    ],
+    [
+      // world 3 level 5
+    ],
+    [
+      // world 3 level 6
+    ],
+    [
+      // world 3 level 7
+    ],
+    [
+      // world 3 level 8
+    ],
+    [
+      // world 3 level 9
+    ]
+  ] // end world 3
 ];
