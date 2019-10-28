@@ -52,7 +52,7 @@ let maps = [
 
     [
       // world 0 level 1, cave background tile
-      
+
       "==================================",
       "=     =         =     =   =   =0=",
       "=         =     =         =     =",
@@ -125,7 +125,7 @@ let maps = [
     ],
     [
       // world 0 level 3, cave background tile
-      
+
       "=====================================================================================================",
       "=     =   =     =   =   =             =     =     =     =         =   =       =     =       =       =",
       "= === = = = === = === = = = ========= = === = === = = = = ======= = = === === ===== = ======= ===== =",
@@ -192,6 +192,7 @@ let maps = [
     ],
     [
       // world 0 level 5
+
     ],
     [
       // world 0 level 6
@@ -210,6 +211,29 @@ let maps = [
     // begin world 1
     [
       // world 1 level 0
+      "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "T          T K T K T K T K T k TT",
+      "T     T      T   T   T   T     TT",
+      "T     T                        4 ",
+      "T     TTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "T     T",
+      "T     T",
+      "T     T",
+      "T     TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "T                k                                            T",
+      "T     ++++++++++++                   TTT                      T",
+      "T                +                   TkT                      T",
+      "T                +                   TTT                      T",
+      "T                +++++++++++++++++++++++++++++++++++++++++++++T",
+      "T                                                             T",
+      "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT TTTTTTTTT",
+      "T                                                             T",
+      "TTTTTTTTTTTT      TTT       TTTTTTT    TTT      TTTT         KT",
+      "T  1 T     T      TTT       TTT        TTT      TTTT       KT",
+      "T    T     T      TTT       TTT        TTT      TTTT         KT",
+      "T                 TTT       TTT        TTT1     TTTTKKKKKKKKKKT",
+      "TTTTTTTTTTTTTTTTTTTTT   K   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
     ],
     [
       // world 1 level 1
