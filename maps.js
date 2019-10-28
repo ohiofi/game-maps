@@ -16,10 +16,13 @@ w : water
 0 : door to current world level 0, the player always spawns at (1,1)
 1 : door to current world level 1, the player always spawns at (1,1)
 2 : door to current world level 2, the player always spawns at (1,1)
-3 : door to current world level 3, etc...
-4 : door to current world level 4, etc...
-5 : door to current world level 5, etc...
-6 : door to current world level 6, etc...
+3 : door to current world level 3, etc.
+4 : door to current world level 4, etc.
+5 : door to current world level 5, etc.
+6 : door to current world level 6, etc.
+7 : door to current world level 7, etc.
+8 : door to current world level 8, etc.
+9 : door to current world level 9, etc.
 ① : warp to world 1-0
 
 */
@@ -30,12 +33,12 @@ let maps = [
       // world 0 level 0, grass background tile
 
       "rrcccccccccccc+t+ ++T++  +++ ++T+ T+++ ++T+ ^^^==============9===①=======",
-      "r       gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg             T",
-      "r     k    tvv rvv       +G   G  gGgg G+g   ===          tTtT     tTTtTt",
-      "r t  t t k  t          +     +              =7=   tT   ttT tTt   tTTtTT",
-      "r   t  gt  t+ gr r      + G  gG   G  +       ppp  TtT    TtTt   TTtTtTTtTT",
+      "r       gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg     p   p   T",
+      "r     k        r         +G   G  gGgg G+g   ===  ppppppppppppppppptTTtTt",
+      "r t  t t k  t                  g            =7=  p        TttT   tTTtTT",
+      "r   t  gt  t+ g  r      + G  gG   G  + ppppppppppp tT    TtTt   TTtTtTTtTT",
       " r   t T    ++  t          +    +  T  G   ^^^ gp ttT   ttTTtT  TtTTtTT",
-      "r  t    t  gt gr         g+gg G  +Gg  +g ^^^^^ p TtTt    ^^^   tTtTTtTT",
+      "r  t    t  gt g          g+gg G  +Gg  +g ^^^^^ p TtTt    ^^^   tTtTTtTT",
       "r t t^   +   gT               g+     +  g=0=0= p  t tT   ^^^    tTt",
       "r   ^^^     gt r      gTg  + gG + G     t===== p tTT     ===    TTtTt",
       "r  ^^^^^   ^^^         ^^^              t==6== p  TtT    =8=   TtTt",
@@ -236,7 +239,6 @@ let maps = [
       "r                                             TTTTTTTTTTTTTTTTTTTTTT     TTT    r",
       "r                                                                               r",
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
-
     ],
     [
       // world 0 level 6, by https://github.com/Grigory57
@@ -260,34 +262,34 @@ let maps = [
       "T                                                               T",
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
     ],
-        [
+    [
       // world 0 level 7, by https://github.com/GudeTamma
-      "ccccccccccccccccccccccccccccccT6Tcccccccccc5cccccccccccccccccccccc",
-      "c  Tgggggggggggggggg       TTT   TTT             ggggggggggggggg c",
-      "c                            T   T                               c",
-      "cr              ^                   k            ^               c",
-      "c        ^========                               ========^       c",
-      "cr              =                     k           =              c",
-      "c               =                                 =              c",
-      "c               =                                 =              c",
-      "cTt             =====                         =====              c",
-      "crr                 =                         =                  c",
-      "cr                  =                         =                  c",
-      "cr      k           =                         =                  c",
-      "ct                  =                         =                  c",
-      "ctt                 =                         =    T             c",
-      "cttt      k         =                         =                 tTc",
-      "crr                                                           rrrc",
-      "ccccccc1ccccccccc                   k            ccccccccc4ccccccc",
-      "                c                                c               c",
-      "                c                           k    c               c",
-      "                c                                c               c",
-      "                2                                3               c",
-      "                c                                c               c",
-      "                c            k                   c               c",
-      "                cgggggggg              ggggggggggc               c",
-      "                cTt         T     T  T         tTc               c",
-      "rrrrrrrrrrcccccccccccccccccccTT8TTcccccccccccccccccccccccrrrrrrrrrr"
+      "ccccccccccccccccccccccccccT6Tccccccc5cccccccccccccccc",
+      "c  Tgggggggggggggggg   TTT   TTT     gggggggggggggggc",
+      "c                        T   T                      c",
+      "cr              ^           k        ^              c",
+      "c        ^========                  ========^       c",
+      "cr              =             k      =              c",
+      "c               =                    =              c",
+      "c               =                    =              c",
+      "cTt             =====            =====              c",
+      "crr                 =            =                  c",
+      "cr                  =            =                  c",
+      "cr      k           =            =                  c",
+      "ct                  =            =                  c",
+      "ctt                 =            =    T             c",
+      "cttt      k         =            =                tTc",
+      "crr                                              rrrc",
+      "ccccccc1ccccccccc           k       ccccccccc4ccccccc",
+      "                c                   c               c",
+      "                c                   c               c",
+      "                c                   c               c",
+      "                2                   3               c",
+      "                c                   c               c",
+      "                c        k          c               c",
+      "                cggggg       gggggc                 c",
+      "                cTt   T     T  T       tTc          c",
+      "rrrrrrrrrrcccccccccccccTT8TTccccccccccccccccrrrrrrrrr"
     ],
     [
       // world 0 level 8
@@ -363,35 +365,34 @@ let maps = [
       "TtTtTtTtTT tTTtTtTTtTTtTtT+T TT tTtTtTtTTtT+T TTtT+T TTtT+T TtT+TT tTtTtT tT+T TtT+T+T TTT tT+T TtT+T+T TTT+T TtT+TTtT+T TTtT+T T tT+T TTT+T TtT+TTtT+T TTtT+T TtTtT",
       "TtTtTtTtTTtTtTtTtTTtTtTTtTtTtTtTT tTtTtTTtTT tTtTTtT+T TTtT+T TTtT+T TtT+TT tTtTtT tT+T TtT+T+T TTT tT+T TtT+T+T TTT+T TtT+TTtT+T TTtT+T T tT+T TTT+T TtT+TTtT+T TTtT+T TtTtT"
     ]
- 
   ], // end world 0
   [
     // begin world 1
     [
       // world 1 level 0
-      "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
-      "T          T k T k T k T k T k TT",
-      "T     T      T   T   T   T     TT",
+      "TtTttTtTtTTtttTTtTTttTtTtTTttTTTT",
+      "t          T k T k T k T k T k tT",
+      "T     t      T   T   T   T     TT",
       "T     T                        4 ",
-      "T     TTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "t     tTtTtTtttTttttTttTtttTTttTT",
       "T     T",
       "T     T",
       "T     T",
-      "T     TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
-      "T                k                                            T",
-      "T     ++++++++++++                   TTT                      T",
+      "T     TTtTtttTTTtTttTtTTtTttTTTTtTttTtTTtTtttTTTtTttTtTTtTttTTT",
+      "t                k                                            T",
+      "T     +++++++++++                    TtT                      T",
       "T                +                   TkT                      T",
-      "T                +                   TTT                      T",
-      "T                +++++++++++++++++++++++++++++++++++++++++++++T",
+      "t                 +                  ttT                      T",
+      "T                  +++++++++++++++++++++++++++++++++++++++++++T",
       "T                                                             T",
-      "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT TTTTTTTTT",
+      "TTtTttTtTTtTttTTTtttttTtTTtTtttTTTtTttTtTTtTttTTTTttT TtTTtTttT",
       "T                                                             T",
-      "TTTTTTTTTTTT      TTT       TTTTTTT    TTT      TTTT         kT",
-      "T  1 T     T      TTT       TTT        TTT      TTTT        kT",
-      "T    T     T      TTT       TTT        TTT      TTTT         kT",
-      "T                 TTT       TTT        TTT1     TTTTk k k k k T",
-      "TTTTTTTTTTTTTTTTTTTTT   k   TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
-      "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+      "TttTTTtTttT       tTt        ttTtTt     t        tt          kT",
+      "T  1 T     T      ttT       TtT        TTT      tTtT        kT",
+      "T    T     T      TtT       tTT        TtT      tTtT         kT",
+      "T                 TtT       TTT        TtT1     tTtTk k k k k T",
+      "tTTTttttTtTtTTttTTTtT   k   TTtTTtTtTTttTTTtTTtTTtTtTTtTTTTttTT",
+      "TTtTTtTtTTtTTTTtTTtTTtTtTTttTTTtTTtTTtTtTTtTTTTtTTtTTtTtTTtTTTT"
     ],
     [
       // world 1 level 1
