@@ -1,5 +1,12 @@
 <html>
-</head>
+    <head>
+        <style>
+            *{
+                padding:0;
+                margin: 0;
+            }
+        </style>
+    </head>
 <body>
     
     <div id="grid" style="display:inline-grid; grid-template-columns: repeat(73, 1fr);
@@ -49,22 +56,55 @@
 
     let grid = document.getElementById("grid")
 
+    const setMaterial = (element, material) => {
+        let color = "white"
+        material = material || " "
+        element.dataset["material"] = material
+        switch(material){
+            case "=": 
+                color = "red"
+                break;
+            case "g": 
+                color = "green"
+                break;
+            case "G": 
+                color = "red"
+                break;
+            case "k": 
+                color = "orange"
+                break;
+            case "p": 
+                color = "gray"
+                break;
+            case "r": 
+                color = "brown"
+                break;
+            case "^": 
+                color = "yellow"
+                break;
+            case "t": 
+                color = "#6eff8f"
+                break;
+            case "T": 
+                color = "#005f16"
+                break;
+            case "+": 
+                color = "#688664"
+                break;                
+        }
+
+        element.innerHTML = material
+        element.style.cssText = "width:15px;height:15px;font-size: 12px;border: #000 1px solid;background-color:"+color+";"
+    }
+
     for(let row = 0; row < height; row++){
         for(let col = 0; col < width; col++){
             let pixelElement = map[row][col]
             let pixel = document.createElement("div")
-            let color = "white"
-            pixel.dataset
-            pixel.dataset["material"] = "nothing"
-            if(pixelElement === "="){
-                color = "red"
-                pixel.dataset["material"] = "brick"
-            }
-            if(pixelElement === "r"){
-                color = "brown"
-                pixel.dataset["material"] = "brick"
-            }
-            pixel.style.cssText = "width:10px;height:10px;background-color:"+color+";"
+            setMaterial(pixel, pixelElement)
+
+            pixel.addEventListener("click", (e) => {
+            })
             
             grid.appendChild(pixel)
             
