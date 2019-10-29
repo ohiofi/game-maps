@@ -1,0 +1,77 @@
+<html>
+</head>
+<body>
+    
+    <div id="grid" style="display:inline-grid; grid-template-columns: repeat(73, 1fr);
+        grid-template-rows:repeat(25, 1fr)">
+
+    </div>
+
+    <p>Current: <span id="current"></span></p>
+    <button id="brick">Brick</button>
+    
+    <div id="output"></div>
+
+<script>
+    let width  = 73;
+    let height = 25;
+
+    let map = [
+      "rrcccccccccccc+t+ ++T++  +++ ++T+ T+++ ++T+ ^^^==============9===①=======",
+      "r       gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg     p   p   T",
+      "r     k        r         +G   G  gGgg G+g   ===  ppppppppppppppppptTTtTt",
+      "r t  t t k  t                  g            =7=  p        TttT   tTTtTT",
+      "r   t  gt  t+ g  r      + G  gG   G  + ppppppppppp tT    TtTt   TTtTtTTtTT",
+      " r   t T    ++  t          +    +  T  G   ^^^ gp ttT   ttTTtT  TtTTtTT",
+      "r  t    t  gt g          g+gg G  +Gg  +g ^^^^^ p TtTt    ^^^   tTtTTtTT",
+      "r t t^   +   gT               g+     +  g=0=0= p  t tT   ^^^    tTt",
+      "r   ^^^     gt r      gTg  + gG + G     t===== p tTT     ===    TTtTt",
+      "r  ^^^^^   ^^^         ^^^              t==6== p  TtT    =8=   TtTt",
+      "r  =0=0=  ^^^^^r     g^^^^^    ^^^     gr  ppppp   tTTt  pp T   TtTT",
+      "r T=====  =====    rr =====rg ^^^^^        +gg pg  Tt  ppp tTTT   tTtTt",
+      "r T=1===  ==2==r  rccc==4==T  =====g   t    t  p  TTtTtp  TTtTTtT   tTT",
+      "r   ppppppppppppprcc3ccrp     ==5==          T pp grT  pTtTtTTt    TT",
+      "gccccccccccccccgpppppppppgg   tgpt Tgt  ppppt   p  TTTtp  TtTTtTt   TtTT",
+      "t   g  T         gg gg  pppp+tppppppppppp tpptggpppppppp tTtT+T TtTTtT",
+      " t           T         gr  pppp++g  t   tg gpppppgtgtgtTtTTtTTtTtTtT",
+      "t                         t+g t gt gtgt  gT  +   T   TtT+T TtTTtTtTTtTtTTtT",
+      " Tg     Tg              tg  +tg t gT    gT     Tg T+T TtTtgTtTtTtTtT+T T",
+      " r                          gt    +t gt  gtT g+ Tg tTTtTtTTtTtT+T TtTTtT",
+      "T                 Tg   gg   Tg       t+           gT+T TtTTtTtTtTtTTtTtT",
+      " t           gg                     T       T     tT tTTtT tTTtTtTtTTtT",
+      " gt         T                  tg T  gT   T      TTtTtTTtTtTTtTtTtTTtT",
+      "g  tcccc ccc ccccc   gTrrg  t    t   +++T      gT+TTtTtTTtTtTTtTtTTtTTtT",
+      " g  TrrTT    T +T cccc   +++ +++t +++   +++++T++tTtT+T TT+T TtTTtTTT tTTT"
+    ]
+
+    let current = document.getElementById("current")
+    let brickButton = document.getElementById("brick")
+
+    let grid = document.getElementById("grid")
+
+    for(let row = 0; row < height; row++){
+        for(let col = 0; col < width; col++){
+            let pixelElement = map[row][col]
+            let pixel = document.createElement("div")
+            let color = "white"
+            pixel.dataset
+            pixel.dataset["material"] = "nothing"
+            if(pixelElement === "="){
+                color = "red"
+                pixel.dataset["material"] = "brick"
+            }
+            if(pixelElement === "r"){
+                color = "brown"
+                pixel.dataset["material"] = "brick"
+            }
+            pixel.style.cssText = "width:10px;height:10px;background-color:"+color+";"
+            
+            grid.appendChild(pixel)
+            
+        }   
+    }
+
+</script>
+
+</body>
+</html>
