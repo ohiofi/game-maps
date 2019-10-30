@@ -3,7 +3,7 @@ let world;
 let wld = 0;
 let lvl = 0;
 let gridSize;
-let fieldOfView = 14;
+let fieldOfView = 10;
 let player;
 let camera = {
   x: -5,
@@ -14,6 +14,7 @@ let camera = {
 let images = {};
 let hoverHighlightOn = true;
 let frameRateSum = 0;
+let frameRates = [];
 let gameState = "titlescreen";
 let myFont;
 let startButton;
@@ -86,7 +87,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  gridSize = (width + height) * 0.035;
+  gridSize = (width + height) * 0.05;
   world = Level.buildLevels();
   print(world);
   player = new Hero([images.hero1, images.hero2, images.hero3, images.hero4]);
@@ -116,8 +117,13 @@ function draw() {
     centerTheCamera();
     fill(0);
     frameRateSum += frameRate();
+    //frameRates.push(frameRateSum += frameRate());
+    //if(frameRates.length > 25){
+    //  frameRates.splice(0,1)
+    //}
     textSize(11);
     text("FPS: " + round(frameRateSum / frameCount), width / 2, 10);
+    //text("FPS: " + round(frameRates.reduce((a,b) => a + b, 0) / frameRates.length), width / 2, 10);
   }
 }
 
@@ -310,5 +316,5 @@ function mousePressed() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  gridSize = (windowWidth + windowHeight) * 0.036;
+  gridSize = (windowWidth + windowHeight) * 0.05;
 }
