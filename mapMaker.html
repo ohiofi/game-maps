@@ -14,9 +14,12 @@
 
     </div>
 
-    <p>Current: <span id="current"></span></p>
-    <button id="brick">Brick</button>
-    
+    <p>Current:</p>
+
+    <div id="materialSelector">
+    </div>
+
+    <button id="compile">Compile Map</button>
     <div id="output"></div>
 
 <script>
@@ -51,50 +54,89 @@
       " g  TrrTT    T +T cccc   +++ +++t +++   +++++T++tTtT+T TT+T TtTTtTTT tTTT"
     ]
 
+    let materials = [
+        {name:"Clear",         material: " ", color:"white"},
+        {name:"Brick",         material: "=", color:"red"},
+        {name:"Cliff",         material: "c", color:"#282635"},
+        {name:"Tall Grass",    material: "g", color:"green"},
+        {name:"Gravestone",    material: "G", color:"light gray"},
+        {name:"Kitty",         material: "k", color:"orange"},
+        {name:"Cobblestone",   material: "p", color:"gray"},
+        {name:"Rock",          material: "r", color:"brown"},
+        {name:"Roof shingles", material: "^", color:"yellow"},
+        {name:"Small tree",    material: "t", color:"#6eff8f"},
+        {name:"Big tree",      material: "T", color:"#005f16"},
+        {name:"Dead tree",     material: "+", color:"#688664"},
+        {name:"Water",         material: "w", color:"blue"},
+        {name:"Exit",          material: "①", color:"purple"},
+        {name:"Exit 0",             material: "0", color:"purple"},
+        {name:"Exit 1",             material: "1", color:"purple"},
+        {name:"Exit 2",             material: "2", color:"purple"},
+        {name:"Exit 3",             material: "3", color:"purple"},
+        {name:"Exit 4",             material: "4", color:"purple"},
+        {name:"Exit 5",             material: "5", color:"purple"},
+        {name:"Exit 6",             material: "6", color:"purple"},
+        {name:"Exit 7",             material: "7", color:"purple"},
+        {name:"Exit 8",             material: "8", color:"purple"},
+        {name:"Exit 9",             material: "9", color:"purple"},
+    ]
+
+    let currentMaterial = "="
+
+    const addMaterialSelector = (config) => {
+        let materialSelector = document.getElementById("materialSelector")
+        let div = document.createElement("div")
+        let input = document.createElement("input")
+        let label = document.createElement("label")
+        input.type = "radio"
+        input.id = config.name.replace(" ", "_")
+        input.name = "current"
+        input.value = config.material
+
+        input.addEventListener("click", () => currentMaterial = config.material)
+
+        label.for = input.id
+        label.innerHTML = config.name
+
+        div.appendChild(label)
+        div.appendChild(input)
+
+        materialSelector.appendChild(div)
+    }
+
+    materials.forEach( addMaterialSelector )
+
     let current = document.getElementById("current")
     let brickButton = document.getElementById("brick")
 
+    
+
     let grid = document.getElementById("grid")
+
+    let compile = document.getElementById("compile")
+    compile.addEventListener("click", () => {
+        let output = document.getElementById("output")
+        output.innerHTML = ""
+        let all = Array.from(grid.querySelectorAll("div"))
+        let result = '['
+        for(let row=0;row<height;row++){
+            result += '"'
+            for(let col=0;col<width;col++){
+                result += all[(row*width)+col].dataset["material"]
+            }
+            result += '", <br>'
+        }
+        output.innerHTML = result+"]"
+    })
+
+    const getColorForMaterial = (materialChar) => materials.find( m => m.material === materialChar).color
 
     const setMaterial = (element, material) => {
         let color = "white"
         material = material || " "
         element.dataset["material"] = material
-        switch(material){
-            case "=": 
-                color = "red"
-                break;
-            case "g": 
-                color = "green"
-                break;
-            case "G": 
-                color = "red"
-                break;
-            case "k": 
-                color = "orange"
-                break;
-            case "p": 
-                color = "gray"
-                break;
-            case "r": 
-                color = "brown"
-                break;
-            case "^": 
-                color = "yellow"
-                break;
-            case "t": 
-                color = "#6eff8f"
-                break;
-            case "T": 
-                color = "#005f16"
-                break;
-            case "+": 
-                color = "#688664"
-                break;                
-        }
-
         element.innerHTML = material
-        element.style.cssText = "width:15px;height:15px;font-size: 12px;border: #000 1px solid;background-color:"+color+";"
+        element.style.cssText = "width:15px;height:15px;font-size: 12px;border: #000 1px solid;background-color:"+getColorForMaterial(material)+";"
     }
 
     for(let row = 0; row < height; row++){
@@ -102,12 +144,11 @@
             let pixelElement = map[row][col]
             let pixel = document.createElement("div")
             setMaterial(pixel, pixelElement)
-
             pixel.addEventListener("click", (e) => {
+                e.srcElement.dataset["material"] = currentMaterial
+                setMaterial(e.srcElement, currentMaterial)
             })
-            
             grid.appendChild(pixel)
-            
         }   
     }
 
