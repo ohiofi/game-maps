@@ -1,6 +1,6 @@
 # game-maps
 
-maps for an RPG-style game
+An untitled HTML5 RPG game in development
 
 Demo here: [https://farmgame.glitch.me/](https://farmgame.glitch.me/)
 
@@ -10,7 +10,7 @@ MAP SYMBOLS:
 c : cliff
 g : tall grass
 G : gravestone/tombstone
-k : kitty
+k : kitty (or chicken)
 p : path/cobblestone
 r : rock
 ^ : roof shingles
