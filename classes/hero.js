@@ -86,6 +86,8 @@ class Hero extends Mover {
           world[wld][lvl].map[i][j].y
         ) < 0.5
       ) {
+        //save player's current location as new spawn point for this level
+        world[wld][lvl].spawnPoint = {x:this.x,y:this.y};
         gameState = "titlescreen";
         let tempDoor = world[wld][lvl].map[i][j];
         wld = tempDoor.gotoWorld;
@@ -130,13 +132,13 @@ class Hero extends Mover {
     }
   }
   spawn() {
-    this.x = 1;
-    this.y = 1;
-    this.newX = 1;
-    this.newY = 1;
+    this.x = world[wld][lvl].spawnPoint.x;
+    this.y = world[wld][lvl].spawnPoint.y;
+    this.newX = world[wld][lvl].spawnPoint.x;
+    this.newY = world[wld][lvl].spawnPoint.y;
     this.raycast = {
-      x: 1,
-      y: 1
+      x: world[wld][lvl].spawnPoint.x,
+      y: world[wld][lvl].spawnPoint.y
     };
     resetCamera();
   }

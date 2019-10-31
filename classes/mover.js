@@ -2,7 +2,7 @@
 
 class Mover extends Sprite {
   constructor(_x, _y, _z, _size, _direction, _imgArray) {
-    super(_x, _y, _z, _size, _direction, _imgArray);
+    super(_x, _y, _z, _size, _direction, false, _imgArray);
     this.newX = _x;
     this.newY = _y;
     this.wallDistance = 1;
