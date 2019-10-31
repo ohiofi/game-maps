@@ -1,10 +1,12 @@
 /*
 
 MAP SYMBOLS:
+♀ : player spawn point
 = : brick
 c : cliff
 g : tall grass
 G : gravestone/tombstone
+h : hen/chicken
 k : kitty
 p : path/cobblestone
 r : rock
@@ -13,16 +15,16 @@ t : small tree
 T : big tree
 + : dead tree
 w : water
-0 : door to current world level 0, the player always spawns at (1,1)
-1 : door to current world level 1, the player always spawns at (1,1)
-2 : door to current world level 2, the player always spawns at (1,1)
-3 : door to current world level 3, etc.
-4 : door to current world level 4, etc.
-5 : door to current world level 5, etc.
-6 : door to current world level 6, etc.
-7 : door to current world level 7, etc.
-8 : door to current world level 8, etc.
-9 : door to current world level 9, etc.
+0 : door to current world level 0
+1 : door to current world level 1
+2 : door to current world level 2
+3 : door to current world level 3
+4 : door to current world level 4
+5 : door to current world level 5
+6 : door to current world level 6
+7 : door to current world level 7
+8 : door to current world level 8
+9 : door to current world level 9
 ① : warp to world 1-0
 
 */
@@ -33,9 +35,9 @@ let maps = [
       // world 0 level 0, grass background tile
 
       "rrcccccccccccc+t+ ++T++  +++ ++T+ T+++ ++T+ ^^^==============9===①=======",
-      "r       gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg     p   p   T",
-      "r     k        r         +G   G  gGgg G+g   ===  ppppppppppppppppptTTtTt",
-      "r t  t t k  t                  g            =7=  p        TttT   tTTtTT",
+      "r♀      gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg     p   p   T",
+      "r     k   h    r         +G   G  gGgg G+g   ===  ppppppppppppppppptTTtTt",
+      "r t  t t k  t      h           g            =7=  p        TttT   tTTtTT",
       "r   t  gt  t+ g  r      + G  gG   G  + ppppppppppp tT    TtTt   TTtTtTTtTT",
       " r   t T    ++  t          +    +  T  G   ^^^ gp ttT   ttTTtT  TtTTtTT",
       "r  t    t  gt g          g+gg G  +Gg  +g ^^^^^ p TtTt    ^^^   tTtTTtTT",
@@ -49,7 +51,7 @@ let maps = [
       "gccccccccccccccgpppppppppgg   tgpt Tgt  ppppt   p  TTTtp  TtTTtTt   TtTT",
       "t   g  T         gg gg  pppp+tppppppppppp tpptggpppppppp tTtT+T TtTTtT",
       " t           T         gr  pppp++g  t   tg gpppppgtgtgtTtTTtTTtTtTtT",
-      "t                         t+g t gt gtgt  gT  +   T   TtT+T TtTTtTtTTtTtTTtT",
+      "t                 h k     t+g t gt gtgt  gT  +   T   TtT+T TtTTtTtTTtTtTTtT",
       " Tg     Tg              tg  +tg t gT    gT     Tg T+T TtTtgTtTtTtTtT+T T",
       " r                          gt    +t gt  gtT g+ Tg tTTtTtTTtTtT+T TtTTtT",
       "T                 Tg   gg   Tg       t+           gT+T TtTTtTtTtTtTTtTtT",
