@@ -35,9 +35,9 @@ let maps = [
       // world 0 level 0, grass background tile
 
       "rrcccccccccccc+t+ ++T++  +++ ++T+ T+++ ++T+ ^^^==============9===①=======",
-      "r       gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg     p   p   T",
-      "r     k        r         +G   G  gGgg G+g   ===  ppppppppppppppppptTTtTt",
-      "r t  t t k  t                  g            =7=  p        TttT   tTTtTT",
+      "r♀      gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg     p   p   T",
+      "r     k   h    r         +G   G  gGgg G+g   ===  ppppppppppppppppptTTtTt",
+      "r t  t t k  t      h           g            =7=  p        TttT   tTTtTT",
       "r   t  gt  t+ g  r      + G  gG   G  + ppppppppppp tT    TtTt   TTtTtTTtTT",
       " r   t T    ++  t          +    +  T  G   ^^^ gp ttT   ttTTtT  TtTTtTT",
       "r  t    t  gt g          g+gg G  +Gg  +g ^^^^^ p TtTt    ^^^   tTtTTtTT",
@@ -403,7 +403,31 @@ let maps = [
       "TTtTTtTtTTtTTTTtTTtTTtTtTTttTTTtTTtTTtTtTTtTTTTtTTtTTtTtTTtTTTT"
     ],
     [
-      // world 1 level 1
+      // world 1 level 1, by https://github.com/not-arzuaga
+
+      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "r                rrrrrrrrr        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "r                rrrrrrrrrr      rrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwrrrrrr",
+      "r  rrrrrrrrrrrr  rrrrrrrrrrr    rrrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwrr",
+      "r  rrk      rrr  rrrrrrrrrrrr  rrrrrrrrrrrrrrrrww             wwrr",
+      "r  rrrrrrr  rrr  rrrrrrrrrrrr  rrrrrrrrrrrrrrrrww             wwrr",
+      "r           rrr                                               wwrr",
+      "rrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrww             wwrr",
+      "rrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrww             wwrr",
+      "rrr              rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwrr",
+      "rrr  rrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwrrrrrr",
+      "rrr  rrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "rrr  rrrrrrrrrr        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "rrr  rrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "rrr  rrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "rrr  rrrrrrrrrrrrrrrr      rrrrrrrrrrr      rrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "rrr  rrrrrrrrrrrrrrrrrrrr                               rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "rrr     G G G G G  rrrrrr  rrrrrrrrrr        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr                      r",
+      "rrr             G  rrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr                      r",
+      "rrr     G G G G G  rrrrrr                                          pppppppppppppppppppppppppppppppp2",
+      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr                      r",
+      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr         rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr                      r",
+      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
     ],
     [
       // world 1 level 2

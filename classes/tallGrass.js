@@ -4,7 +4,7 @@ class TallGrass extends Sprite {
   constructor(_x, _y, _z, _direction, _img) {
     super(_x, _y, _z, 1, _direction, false, [_img]);
     //this.isWall = false;
-    this.height = random(0.2, 1);
+    this.height = random(0.3, 1);
     this.img = _img;
     this.growTimer = 0;
     this.growSpeed = random(800, 1600);

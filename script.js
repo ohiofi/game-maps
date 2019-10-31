@@ -120,7 +120,6 @@ function draw() {
     hoverHighlight();
     centerTheCamera();
     showText();
-    
   }
 }
 
@@ -141,7 +140,7 @@ function titleScreen() {
   showText()
   if(keyIsDown(32)){
       gameState = "ingame";
-     }
+  }
 }
 
 function showText(){
