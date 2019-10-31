@@ -396,6 +396,30 @@ let maps = [
     ],
     [
       // world 1 level 1
+
+      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "r                rrrrrrrrr        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "r                rrrrrrrrrr      rrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwrrrrrr",
+      "r  rrrrrrrrrrrr  rrrrrrrrrrr    rrrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwrr",
+      "r  rrk      rrr  rrrrrrrrrrrr  rrrrrrrrrrrrrrrrww             wwrr",
+      "r  rrrrrrr  rrr  rrrrrrrrrrrr  rrrrrrrrrrrrrrrrww             wwrr",
+      "r           rrr                                               wwrr",
+      "rrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrww             wwrr",
+      "rrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrww             wwrr",
+      "rrr              rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwrr",
+      "rrr  rrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwrrrrrr",
+      "rrr  rrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "rrr  rrrrrrrrrr        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "rrr  rrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "rrr  rrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "rrr  rrrrrrrrrrrrrrrr      rrrrrrrrrrr      rrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "rrr  rrrrrrrrrrrrrrrrrrrr                               rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "rrr     G G G G G  rrrrrr  rrrrrrrrrr        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr                      r",
+      "rrr             G  rrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr                      r",
+      "rrr     G G G G G  rrrrrr                                          ppppppppppppppppppppppppppppppppp",
+      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr                      r",
+      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr         rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr                      r",
+      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
     ],
     [
       // world 1 level 2
