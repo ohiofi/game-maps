@@ -7,7 +7,7 @@ class Sprite {
   static maxZ() {
     return 4;
   }
-  constructor(_x, _y, _z, _size, _direction, _imgArray) {
+  constructor(_x, _y, _z, _size, _direction, _flipY, _imgArray) {
     this.x = _x;
     this.y = _y;
     this.z = _z;
@@ -15,16 +15,27 @@ class Sprite {
     this.imgArray = _imgArray;
     this.currentImg = 0;
     this.direction = _direction;
+    this.flipY = _flipY;
   }
   show() {
     push();
     // allow for gridSize to be adjustable
     let mySize = gridSize * this.size;
-    translate(
+    if(this.flipY){
+      translate(
+        (this.x - camera.x) * gridSize - gridSize / 2,
+        (this.y - camera.y) * gridSize - gridSize - mySize
+      );
+      scale(this.direction, -1);
+    }else{
+      translate(
       (this.x - camera.x) * gridSize - gridSize / 2,
       (this.y - camera.y) * gridSize - gridSize
     );
     scale(this.direction, 1);
+    }
+    
+    
 
     image(
       this.imgArray[this.currentImg],

@@ -1,8 +1,13 @@
-/*global Sprite,Mover,Wall,Door,TallGrass,loadImage,images,world,ceil,floor,dist,frameCount,random,maps*/
+/*global Sprite,Mover,Wall,Door,TallGrass,loadImage,round,images,world,ceil,floor,dist,frameCount,random,maps*/
 class Level {
   constructor(_worldNumber, _levelNumber) {
     this.worldNumber = _worldNumber;
     this.levelNumber = _levelNumber;
+    this.spawnPoint =
+      {
+        x:1,
+        y:1
+      };
     this.backgroundTile = loadImage(
       "https://cdn.glitch.com/bcd2d97a-a3a6-4c95-a869-471d86d9430d%2Fgrass.png?v=1528843673149"
     );
@@ -17,13 +22,38 @@ class Level {
     //for(let column in lineArray[row]){
     for (let column = 0; column < newRowString.length; column++) {
       switch (newRowString.charAt(column)) {
+        case "♀":
+          this.spawnPoint.x = column;
+          this.spawnPoint.y = tempRowNum;
+          this.map[tempRowNum].push(false);
+          break;
         case "k":
           this.movers[tempRowNum].push(
-            new Mover(column, tempRowNum, 1, 0.8, Sprite.randomDirection(), [
-              images.cat1,
-              images.cat2
-            ])
+            new Mover(
+              column,
+              tempRowNum,
+              1,
+              0.65,
+              Sprite.randomDirection(),
+              // mover class can't flipY
+              [images.cat1, images.cat2]
+            )
           );
+          this.map[tempRowNum].push(false);
+          break;
+        case "h":
+          this.movers[tempRowNum].push(
+            new Mover(
+              column,
+              tempRowNum,
+              1,
+              0.5,
+              Sprite.randomDirection(),
+              // mover class can't flipY
+              [images.chicken1, images.chicken2]
+            )
+          );
+
           this.map[tempRowNum].push(false);
           break;
         case "w":
@@ -32,17 +62,24 @@ class Level {
               column, // x
               tempRowNum, // y
               0, // z
-              1.05, // size
-              Sprite.randomDirection(),
+              1, // size
+              Sprite.randomDirection(), // direction
+              round(random()), // flipY
               images.water
             )
           );
           break;
         case "p":
           this.map[tempRowNum].push(
-            new Sprite(column, tempRowNum, 0, 1, Sprite.randomDirection(), [
-              images.cobblestone
-            ])
+            new Sprite(
+              column, // x
+              tempRowNum, // y
+              0, // z
+              1, // size
+              Sprite.randomDirection(), // direction
+              round(random()), // flipY
+              [images.cobblestone]
+            )
           );
           break;
         case "=":
@@ -52,7 +89,8 @@ class Level {
               tempRowNum, // y
               1, // z
               1.25, // size
-              Sprite.randomDirection(),
+              Sprite.randomDirection(), // direction
+              round(random()), // flipY
               images.brick
             )
           );
@@ -64,7 +102,8 @@ class Level {
               tempRowNum,
               3, // z
               1.25, // size
-              Sprite.randomDirection(),
+              Sprite.randomDirection(), // direction
+              round(random()), // flipY
               images.roof
             )
           );
@@ -77,6 +116,7 @@ class Level {
               0,
               1.08,
               Sprite.randomDirection(),
+              round(random()), // flipY
               images.cliff
             )
           );
@@ -89,6 +129,7 @@ class Level {
               1,
               1.3,
               Sprite.randomDirection(),
+              false, // flipY
               images.rock
             )
           );
@@ -101,6 +142,7 @@ class Level {
               2,
               2.45,
               Sprite.randomDirection(),
+              false, // flipY
               images.bigtree
             )
           );
@@ -113,21 +155,37 @@ class Level {
               2,
               1.55,
               Sprite.randomDirection(),
+              false, // flipY
               images.smalltree
             )
           );
           break;
         case "+":
-          this.map[tempRowNum].push(
-            new Wall(
-              column,
-              tempRowNum,
-              2,
-              1.6,
-              Sprite.randomDirection(),
-              images.deadtree
-            )
-          );
+          if (random() > 0.5) {
+            this.map[tempRowNum].push(
+              new Wall(
+                column,
+                tempRowNum,
+                2,
+                1.6,
+                Sprite.randomDirection(),
+                false, // flipY
+                images.deadtree
+              )
+            );
+          } else {
+            this.map[tempRowNum].push(
+              new Wall(
+                column,
+                tempRowNum,
+                2,
+                1.2,
+                Sprite.randomDirection(),
+                false, // flipY
+                images.stump
+              )
+            );
+          }
           break;
         case "g":
           this.map[tempRowNum].push(
@@ -136,6 +194,7 @@ class Level {
               tempRowNum,
               1,
               Sprite.randomDirection(),
+              // tallgrass class can't flipY
               images.tallgrass
             )
           );
@@ -143,7 +202,15 @@ class Level {
           break;
         case "G":
           this.map[tempRowNum].push(
-            new Wall(column, tempRowNum, 0, 1.2, 1, images.gravestone)
+            new Wall(
+              column,
+              tempRowNum,
+              0,
+              1.2,
+              1,
+              false, // flipY
+              images.gravestone
+            )
           );
           break;
         case "0": // goto current world, level 0
@@ -238,7 +305,6 @@ class Level {
           let tempY = floor(random(3)) / 2 - 0.5;
           this.movers[row][i].newX = this.movers[row][i].x + tempX;
           this.movers[row][i].newY = this.movers[row][i].y + tempY;
-          
         }
         this.movers[row][i].show();
         if (
@@ -250,9 +316,7 @@ class Level {
         ) {
           if (row >= 0 && row < this.movers.length) {
             // if new row is a valid index
-            this.movers[ceil(this.movers[row][i].y)].push(
-              this.movers[row][i]
-            );
+            this.movers[ceil(this.movers[row][i].y)].push(this.movers[row][i]);
             this.movers[row].splice(i, 1);
           }
         }

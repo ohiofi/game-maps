@@ -1,10 +1,12 @@
 /*
 
 MAP SYMBOLS:
+♀ : player spawn point
 = : brick
 c : cliff
 g : tall grass
 G : gravestone/tombstone
+h : hen/chicken
 k : kitty
 p : path/cobblestone
 r : rock
@@ -13,16 +15,16 @@ t : small tree
 T : big tree
 + : dead tree
 w : water
-0 : door to current world level 0, the player always spawns at (1,1)
-1 : door to current world level 1, the player always spawns at (1,1)
-2 : door to current world level 2, the player always spawns at (1,1)
-3 : door to current world level 3, etc.
-4 : door to current world level 4, etc.
-5 : door to current world level 5, etc.
-6 : door to current world level 6, etc.
-7 : door to current world level 7, etc.
-8 : door to current world level 8, etc.
-9 : door to current world level 9, etc.
+0 : door to current world level 0
+1 : door to current world level 1
+2 : door to current world level 2
+3 : door to current world level 3
+4 : door to current world level 4
+5 : door to current world level 5
+6 : door to current world level 6
+7 : door to current world level 7
+8 : door to current world level 8
+9 : door to current world level 9
 ① : warp to world 1-0
 
 */
@@ -43,34 +45,34 @@ let maps = [
       "r   ^^^     gt r      gTg  + gG + G     t===== p tTT     ===    TTtTt",
       "r  ^^^^^   ^^^         ^^^              t==6== p  TtT    =8=   TtTt",
       "r  =0=0=  ^^^^^r     g^^^^^    ^^^     gr  ppppp   tTTt  pp T   TtTT",
-      "r T=====  =====    rr =====rg ^^^^^        +gg pg  Tt  ppp tTTT   tTtTt",
-      "r T=1===  ==2==r  rccc==4==T  =====g   t    t  p  TTtTtp  TTtTTtT   tTT",
-      "r   ppppppppppppprcc3ccrp     ==5==          T pp grT  pTtTtTTt    TT",
-      "gccccccccccccccgpppppppppgg   tgpt Tgt  ppppt   p  TTTtp  TtTTtTt   TtTT",
-      "t   g  T         gg gg  pppp+tppppppppppp tpptggpppppppp tTtT+T TtTTtT",
-      " t           T         gr  pppp++g  t   tg gpppppgtgtgtTtTTtTTtTtTtT",
-      "t                         t+g t gt gtgt  gT  +   T   TtT+T TtTTtTtTTtTtTTtT",
-      " Tg     Tg              tg  +tg t gT    gT     Tg T+T TtTtgTtTtTtTtT+T T",
-      " r                          gt    +t gt  gtT g+ Tg tTTtTtTTtTtT+T TtTTtT",
-      "T                 Tg   gg   Tg       t+           gT+T TtTTtTtTtTtTTtTtT",
-      " t           gg                     T       T     tT tTTtT tTTtTtTtTTtT",
-      " gt         T                  tg T  gT   T      TTtTtTTtTtTTtTtTtTTtT",
-      "g  tcccc ccc ccccc   gTrrg  t    t   +++T      gT+TTtTtTTtTtTTtTtTTtTTtT",
-      " g  TrrTT    T +T cccc   +++ +++t +++   +++++T++tTtT+T TT+T TtTTtTTT tTTT"
+      "r T=====  =====    rr =====rg ^^^^^        +gg pg  Tt  ppp tTTT   tTtTtwwwww",
+      "r T=1===  ==2==r  rccc==4==T  =====g   t    t  p  TTtTtp  TTtTTtT   twww",
+      "r   ppppppppppppprcc3ccrp     ==5==          T pp grT  pTtTtTTt    www",
+      "gccccccccccccccgpp ggg  pgg   tgpt Tgt  ppppt   p  TTTtp  TtTTtTwwwwTtTT",
+      "t   g  T         ppppppppppp+tppppppppppp tpptggpppppppp tTtT+wwwtTTtT",
+      " t           T    gg   gr  pppp++g  t   tg gpppppgtgtgtTtTTtwwwTtTtT",
+      "t         k               t+g t gt gtgt  gT  +   T   TtT+TwwwTTtTtTTtTtTTtT",
+      " Tg     Tg     h        tg  +tg t gT    gT     Tg T+T TtwwwTtTtTtTtT+T T",
+      " r          h               gt    +t gt  gtT g+ Tg tTTwwwTTtTtT+T TtTTtT",
+      "T              k  Tg   gg   Tg       t+           gTwwwTtTTtTtTtTtTTtTtT",
+      " t   ♀       gg                     T       T     twwtTTtT tTTtTtTtTTtT",
+      " gt         T                  tg T  gT   T      TwwTtTTtTtTTtTtTtTTtT",
+      "g  tcccc ccc ccccc   gTrrg  t    t   +++T      gTwwTtTtTTtTtTTtTtTTtTTtT",
+      " g  TrrTT    T +T cccc   +++ +++t +++   +++++T++wwtT+T TT+T TtTTtTTT tTTT"
     ],
 
     [
       // world 0 level 1, cave background tile
 
-      "==================================",
-      "=     =         =     =   =   =0=",
-      "=         =     =         =     =",
+      "=================================",
+      "=         =                     =",
+      "=     =   =     ===========     =",
+      "=     =         =         =     =",
+      "=== ========== ==== === ===== ===",
+      "=     = ===     =     = =4=     =",
+      "=     = =3=           =r  =     =",
       "=     =   =     =     =   =     =",
-      "=== ========== ==== === ===== ====",
-      "=     = =1=     =     = =1=     =",
-      "=     =   =           =   =     =",
-      "=     =   =     =     =   =     =",
-      "== ===== ====================== =",
+      "== ===== ============== ======= =",
       "=     =         =         =     =",
       "=     =   =     =     =   =     =",
       "=     =   =           =   =     =",
@@ -78,59 +80,65 @@ let maps = [
       "=     =   =           = =2=     =",
       "=     =   =     =     =   =     =",
       "=         =     =     =   =     =",
-      "== =========== ==== =========== ==",
+      "== =========== ==== =========== =",
       "=     =         =     =         =",
       "=         =     =         =     =",
       "=     =   =     =     =   =     =",
-      "=================================="
+      "=============================♀===",
+      "                            =0=  "
     ],
     [
       // world 0 level 2, sand background tile
 
-      " ====================================r=============",
+      " =4============+=====================r=============",
       "=                        r+           r            =",
       " ======== r===========r =========== r=   ==========",
       "=                                                 +=",
-      " == ======r===== =================== ==r  =========",
-      "=        r  +    r r    r             r   r    r",
-      "=          r     r  +    r   r r rrr r  +   r    r",
-      "=         r     r r    r               r   r    r",
+      " == ======r===== ===========+======= ==r  ==== ====",
+      "=        r  +    r r    +             r   r    r",
+      "=          r     r  +    r   r r rrr r  +   r   r",
+      "=         r     r r    r               r   r     r",
       "==+  +== r  +  r     r    r r r r r r  +   r  +   r",
       "=+  +==   r  + r   r             r   r  r   r  r   r",
       "==+  +==   r r  +   r rr   r r r  +   r  +   r  r   r",
       "==+  +==  r   r  +   r   r  r r r  +  r   r   r  =   r",
       "==+  +==   r =  r   r rr   r r r r    r  +   r  ===   r",
       "==+  +==  r ===  r   r   r  + r   r   r   r  + =====   r",
-      "=+  +==    =====  r  +   r r       r   r   r  =======   r",
-      "==+  +==  =======  r r  + r   r     r   r  r +           r",
-      "=+  +==    r r  + r  +   r   r r r   r   r  +    r  +   r",
-      "==+  +==r r r  +   r  r r   r   r r   r   r  r    r  + r",
+      "=+  +==    =====  r  +   r r       r   r   r  ===1===   r",
+      "==+  +==  ===3===  r r  + r   r     r   r  r +           r",
+      "=+  +==    r  r + r  +   r   r r r   r   r  +    r  +   r",
+      "==+  +==r r  r +   r  r r   r   r r   r   r  r    r  + r",
       "=+  +====  r r  r  +   r   r   r   r   r   r  +    r    r",
       "+    +====r   r r   r r   r   r  =  r   r   r  +    r  +",
       "= =========r r   rr  +   r   r  ===  r   r   r  r  r   r",
       "+   +=====r   r    r  +     r  =====  r   r    r  r   r",
       "==+  +===  r r r  +    r   r  =======  r  +   r  +   r",
       "=+  +===  r  +  r  +   r  +  =========   r r r  +     r",
-      "==+  +==   r  r  r  +  r r  =====3=====rr  +  r    r   r",
+      "==+  +==   r  r  r  +  r r  =====5=====rr  +  r    r   r",
       "=+  +===  r  +  r  +  rr  +  r      + r      r    r   r",
       "==+  +== r    r  +r  +  r  +  r      +    r r    r   r",
       "=+  +===  r  +  r  +  r  +  r       rr r r   r  +   r",
       "==+  +== r    r  +  r r  r   rr r  +  r   r r    r   r",
-      "=+  +===  r  +  r  +   r  +r   r rr  + r r   r  +     r",
-      "==+  +== r    r  +r   r   r rr  +    r   r  +    r   =",
-      "=+  +===  r  +  r  =   r   r  +  r r  +      r  +   ===",
-      "==+  +== r  +  r  ===   r   r  +  r  +   rr r  +   =====",
-      "=+  +==   r   r  =====   r   r  r   r   r  +  r   =======",
-      "==+  +== r   r  =======   r   r  +   r   r  +  r   r",
-      "=+  +==   r r   r    r + r  + r     r   r  +  r   r",
-      "==+  +== r   r   r    +    r     rrr   r  +  r   r",
-      "==        r   r   r    rrrr rrrrr    rr  +  r   r",
-      "===          r     r       r        r   r  +   r",
-      "==== ========= ========= === ======r  +=  =============",
-      "===                                  r              ===",
-      "=1================================r=  r======  ======2=",
-      "=                                                     =",
-      " ==================================r===r=============="
+      "=+  +===  r  +  r  +   r  +r   r rr  + r r   r   +    r",
+      "==+  +== r    r  +r   r   r rr  +    r   r  +     r  =",
+      "=+  +===  r  +  r  =   r   r  +  r r  +      r   +  ===",
+      "==+  +== r  +  r  ===   r   r  +  r  +   rr r   +  =====",
+      "=+  +==   r   r  =====   r   r  r   r   r  +   r  =======",
+      "==+  +== r   r  =======   r   r  +   r   r  +   r      r",
+      "=+  +==   r r   r    r + r  + r     r   r  +     r      r",
+      "==+  +== r   r   r    +    r     rrr   r  +     r      r",
+      "==        r   r   r    rrrr rrrrr    rr  +     r      r",
+      "===          r     r       r        r   r     +      r",
+      "==== ========= ========= === ======r  +=  ========== ==",
+      "===                                  r             =  ==",
+      " == ==============================r=  r======  =====+ =",
+      "  =                                                   +",
+      "   ========================== =======r===r============",
+      "    =========================♀=======================",
+      "     ========================0======================",
+      "      =======================0=====================",
+      "       ======================0====================",
+      "        =====================0==================="
     ],
     [
       // world 0 level 3, cave background tile
@@ -139,7 +147,7 @@ let maps = [
       "=     =   =     =   =   =             =     =     =     =         =   =       =     =       =       =",
       "= === = = = === = === = = = ========= = === = === = = = = ======= = = === === ===== = ======= ===== =",
       "= =   = = = =   =     =   = =       = =   =   = =   = =   =       = =     =       = = =       =     =",
-      "= = === = === ============= = ===== = === ===== ===== ===== ================= = = = = = ======= =====",
+      "= = === = === ============= = ===== = === == == ===== ===== ================= = = = = = ======= =====",
       "= =   = =   = =     =         =     = =   =   =       =   =     =     =     = = = = = = =       =   =",
       "= === = === = ===== = =============== === = = ========= = ===== === === === = = = = = = = ======= = =",
       "=   = =   =       =   =     = =    k  =   = =     =     =   =   =       =   = = = = =   =   =   = = =",
@@ -147,38 +155,38 @@ let maps = [
       "= = = = =   = =   =   =         =       =   = = = =  0  =   =     =     = =   = =   =   =   = = = = =",
       "= = = = ===== = === = = ========= ========= = = = ===== = ===== ===== === = === ======= = === === = =",
       "=   =   =   = = =   = = =         =       = =   = =     =     = =   = =   = = =       = =   =     = =",
-      "=      == = = = = === = = = ======= ===== === === = === ======= = = = = === = ===== = = === ======= =",
+      "=      == = = = = === = = = ======= ===== === === = === = ===== = = = = === = ===== = = === ======= =",
       "=  = =  = =   =   =   = = = =     = =   =   = = = = = = =       = =   = = = =   =   = =   =     =   =",
       "======= = ========= === = === = = = === === = = = = = = = ======= ===== = = === = === = = ===== = ===",
-      "=     = = =   k   = =         = =   =     = = = = =   =   =   = = =   = = = = =   =   = =     = = = =",
-      "= === = = = === = = = = ======= ===== ===== = = = ========= = = = = = = = = = === = ========= = = = =",
+      "=     = = =   k   = =         = =   =     = = = = =   =   =   =6= =   = = = = =   =   = =     = = = =",
+      "= === = = = === = = = = ======= ===== ===== = = = === ===== = = = = = = = = = === = ========= = = = =",
       "=   =   = = =   = = = =       =   = = = 1 = =   = =   =     = =   = =     = = =   = =         =   = =",
       "=== ===== = = === = = ===== = === = = = = = ===== = = = ===== ======= ===== = = === = ============= =",
       "=   =     = = =   =   =     = =   =     = = =       = =     =   =   = =     = = =   =         =     =",
       "= = = = === = === ===== ===== = === ======= = ================= = = = = ===== = = =========== = === =",
-      "= =   =     =   =   =   =     =   = =       =     =       =   = = = =   =   = = = =   =   =   = =   =",
+      "= =   =     =   =   =   =     =   = =       =    5=       =   = = = =   =   = = = =   =   =   = =   =",
       "= ============= === = =========== = ======= = ===== ===== = = = = ========= = === = = = = = ===== ===",
-      "=     =       =   = =    2  = =   =   = =     =   =   =   = = = =     =   = =   = = = = =       = = =",
+      "=     =       =   = =    2  = =   =   = =         =   =   = = = =     =   = =   = = = = =       = = =",
       "===== = ===== = = ======= = = = ===== = = = === = === = === = = === = = = = === = === ========= = = =",
       "=     = =     = =         =   =     =     =     =     =     = =   = = = =   = = = =   =   = =   = = =",
-      "= ======= ===== ============= ===== ============= =========== === = = = ===== = = = === = = = === = =",
+      "= ======= ===== ============= ===== === ========= =========== === = = = ===== = = = === = = = === = =",
       "= =     =   =   =   =       = =   = =   =     =   =     =     =   = = = =     = = = = = =   = =   = =",
       "= = === === ===== = = ======= = = = === === = ===== === = ===== ===== = = ===== = = = = ===== = = = =",
-      "= =   =   =     = = =         = = =     =   =     =   = = =   = =4  = = =       =   =       = = =   =",
+      "= =   =   =     = = =         = = =     =   =     =   = = =   = =   = = =       =   =       = = =   =",
       "= = ===== ===== = = ============= ======= ======= ===== = = = = === = = ===== = ===== ===== = = =====",
-      "= =   =       = = = =     =     = = =   = =     =     =   = =   =   = =     = =     =     = =   =   =",
+      "= =   =       = = = =     =       =4=   = =     =     =   = =   =   = =     = =     =     = =   =   =",
       "= === ========= === = === = === = = = = = = === = === = === ===== === ===== ===== = = ===== = === = =",
       "=   = =   =     =     =   = =   = =   =   = =   =   = =   = =   =   = =   =   =   = = =   = =   = = =",
-      "=== = = = = ===== = ===== = ===== = ======= = = === = === = = = === = = = === ===== === = = === = = =",
+      "=== = = = = ===== = =====   ===== = ======= = = === = === = = = === = = = === ===== === = = === = = =",
       "=   =   =   =     = = =   =   =   =       = = = = = =   =     =     = = =               =       = = =",
       "= ======= ========= = = ===== = ======= = = = = = = === = = ===== === === ========= ======= ======= =",
-      "= =     = =   =     = =     = =         = = = =   = =   = = =     =     = =     = =   = =   =       =",
+      "= =     = =   =       =     = =         = = = =   = =   = = =     =     = =     = =   = =   =       =",
       "= = === = = = = = === ===== = =========== = = ===== ===== = ======= = = = = === = === = = === =======",
-      "= =   = = = =   = =   =     =           =   = =   =       =   =   = = =       =   =   =   =         =",
+      "= =   = = = =     =   =     =           =   = =   =       =   =   = = =       =   =   =   =         =",
       "= === = = = = === = = = ======= ======= = === === =========== === = = ============= ========= ===== =",
-      "=     = = = =   = = =         = =       =   =   =   =       =   =   =   =     = =   =   =       =   =",
+      "=     = = =     = = =         = =       =   =   =   =       =   =   =   =     = =   =   =       =   =",
       "======= = = ===== = =========== = ======= ===== === === ======= ======= = === = = = === = ======= ===",
-      "=       = =   =   =     =     = = =     = =     = =   =   =   =   =     =   =     =       =     =   =",
+      "=         =   =   =     =     = = =     = =     = =   =   =   =   =     =   =     =       =     =   =",
       "= = ===== = === = ======= = = = = = === === = === === === = = === = = ===== =========== === === === =",
       "= = =   = =   = = =   =   = = = =   =   =   =     =   = = = =   =   =     =   =     =   =   =       =",
       "====================================================================================================="
@@ -187,7 +195,7 @@ let maps = [
       // world 0 level 4, by https://github.com/hgcassiopeia
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
       "r         k                                                     rr",
-      "rrrrrrrrrrrrrrrrrrrrrrr1rrrrrrr2rrrrrr4rrrrrr3rrrrrrrrrr   rrrrrrr",
+      "rrrrrrrrrrrrrrrrrrrrrrr1rrrrrrr2rrrrrr0rrrrrr3rrrrrrrrrr   rrrrrrr",
       "rr                                  k                           rr",
       "rrrrrrrrrrrrrrrrrrrrrrrr    rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
       "rr                                   k                          rr",
@@ -197,12 +205,12 @@ let maps = [
       "rr                     k                                        rr",
       "rrrrrrrrrrrrrrrrrrr1rrrrrrrrr2rrrrrrrrrrr1rrrrrrrrrrrrrrrrrrr   rr",
       "rr      k                                                       rr",
-      "rrrrrrrrr5rrrrrrrrrrrrrr3rrrrrrrrrrrrr2rrrrrrrrrrrrrr1rrrrrr4rrrrr"
+      "rrrrrrrrr6rrrrrrrrrrrrrr3rrrrrrrrrrrrr2rrrrrrrrrrrrrr1rrrrrr5rrrrr"
     ],
     [
       // world 0 level 5, by https://github.com/gersongams
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "r                            kTTTT                               TTTG          kr",
+      "r                            kTTTT                               TTT G         kr",
       "r                             TTTT                               TTT            r",
       "rTTTTTTTTTTTTTTTT     TTTT    TTTT     TTTTTTTTTTTTTTTTTTTT      TTTk           r",
       "r           kTTTT     TTTT    TTTT     TTTTTTTTTTTTTTTTTTTT      TTTTTTTTTTTT   r",
@@ -211,19 +219,19 @@ let maps = [
       "r                     TTTT    TTTT     TTT      TTTT               TTTT   TTT   r",
       "r                     TTTT    TTTT     TTT                         TTTT   TTT   r",
       "rrTTTTTTTTTTTTTTTTTTTTTTTT    TTTT     TTT              TTTT       TTTT   TTT   r",
-      "rrTTTTTTTTTTTTTTTTTTTTTTT     TTTT     TTT              TTTT       TTTT   TTT   r",
-      "r                             TTTT     TTTG            kTTTT       TTTT   TTT   r",
+      "rrTTTTTTTTTTTTTTTTTTTTTTT     TTTT     TTT G            TTTT       TTTT   TTT   r",
+      "r                             TTTT     TTT             kTTTT       TTTT   TTT   r",
       "r                   TT        TTTT     TTTTTTTTTTTTTTTTTTTTT       TTTT   TTT   r",
       "rTTTTTTTTTTTTT      TT                 TTTTTTTTTTTTTTTTTTTTT       TTTT   TTT   r",
-      "rG        kTTT      TT                                    TT       TTTT   TTT   r",
-      "r          TTT      TT                                    TT       TTTT   TTT   r",
+      "r         kTTT      TT                                    TT       TTTT   TTT   r",
+      "r G        TTT      TT                                    TT       TTTT   TTT   r",
       "r          TTT      TT k                TTTT              TT       TTTT         r",
       "rk         TTT      TTTTTTTTTTTTTTTTTTTTTTTT              TT       TTTT         r",
       "rTTT       TTT                                            TT       TTTT         r",
       "rTTT       TTT          k               +          k      TT       TTTT         r",
       "rTTT       TTT                                            TT       TTTT   TTTTTTr",
-      "rTTT       TTTTTTT                                        TT       TTTT   TT   Gr",
-      "rTTT       TTTTTTT      TTTT      TTTTTTTTTTTTTTTTTTTTTTTTTT       TTTT   TT    r",
+      "rTTT       TTTTTTT                                        TT       TTTT   TT    r",
+      "rTTT       TTTTTTT      TTTT      TTTTTTTTTTTTTTTTTTTTTTTTTT       TTTT   TT  G r",
       "rTTT                    TTTT                                       TTTT   TT    r",
       "rTTT                    TTTT                                       TTTT   TT    r",
       "rTTTTTTTTTTTTTTTTT      TTTT                                       TTTT   TT    r",
@@ -233,8 +241,8 @@ let maps = [
       "rTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT                                              r",
       "r    k    TTT^^^^^^TT   TTTTTTTTTT            TTTT    TTTTTTTTTTTTTTTTTTTTTTTTTTr",
       "r k  G  k TTT======TT                         TTTT    TTTTTTTTTTTTTTTTTTTTTTTTTTr",
-      "r         TTT==6===TT                         TTTT                       TTTk  Gr",
-      "r   TTTTTTTTT      TTTTTTTTTTTTTTT            TTTT                       TTT    r",
+      "r         TTT==6===TT                         TTTT                       TTTk   r",
+      "r   TTTTTTTTT      TTTTTTTTTTTTTTT            TTTT                       TTT  G r",
       "r   TTTTTTTTT      TTTTTTTTTTTTTTT            TTTTTTTTTTTTTTTTTTTTTT     TTT    r",
       "r                                             TTTTTTTTTTTTTTTTTTTTTT     TTT    r",
       "r                                                                               r",
@@ -369,7 +377,7 @@ let maps = [
   [
     // begin world 1
     [
-      // world 1 level 0
+      // world 1 level 0, by https://github.com/emo8355
       "TtTttTtTtTTtttTTtTTttTtTtTTttTTTT",
       "t          T k T k T k T k T k tT",
       "T     t      T   T   T   T     TT",

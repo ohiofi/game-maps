@@ -3,7 +3,7 @@ h,displayHeight,windowWidth,windowHeight,height,width,dist,loadSound,loadImage,i
 
 class Door extends Sprite {
   constructor(_x, _y, _gotoWorld, _gotoLevel) {
-    super(_x, _y, 0, 1, 1, [null]);
+    super(_x, _y, 0, 1, 1, false, [null]);
     this.gotoWorld = _gotoWorld;
     this.gotoLevel = _gotoLevel;
   }

@@ -3,7 +3,7 @@ let world;
 let wld = 0;
 let lvl = 0;
 let gridSize;
-let fieldOfView = 14;
+let fieldOfView = 10;
 let player;
 let camera = {
   x: -5,
@@ -14,6 +14,7 @@ let camera = {
 let images = {};
 let hoverHighlightOn = true;
 let frameRateSum = 0;
+let frameRates = [];
 let gameState = "titlescreen";
 let myFont;
 let startButton;
@@ -29,7 +30,7 @@ function preload() {
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fwall2.png?v=1571262521867"
   );
   images.cobblestone = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fcobble8.png?v=1572230407077"
+    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fcobblestone01.png?v=1572401416762"
   );
   images.cliff = loadImage(
     "https://cdn.glitch.com/bcd2d97a-a3a6-4c95-a869-471d86d9430d%2Fcliff02.png?v=1528858590669"
@@ -79,6 +80,9 @@ function preload() {
   images.cat2 = loadImage(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fcat2.png?v=1571710106399"
   );
+  images.chicken1 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fchicken1.png?v=1572456558675");
+  images.chicken2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fchicken2.png?v=1572456560191");
+  images.stump = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fstump_fixed.png?v=1572457199834");
   myFont = loadFont(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2FpressStart.ttf?v=1571872754647"
   );
@@ -86,10 +90,11 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  gridSize = (width + height) * 0.035;
+  gridSize = (width + height) * 0.05;
   world = Level.buildLevels();
   print(world);
   player = new Hero([images.hero1, images.hero2, images.hero3, images.hero4]);
+  player.spawn();
   resetCamera();
   document.getElementById("p5_loader").style.display = "none";
 }
@@ -114,10 +119,8 @@ function draw() {
     world[wld][lvl].showLevelInFrontOfPlayer(player, fieldOfView);
     hoverHighlight();
     centerTheCamera();
-    fill(0);
-    frameRateSum += frameRate();
-    textSize(11);
-    text("FPS: " + round(frameRateSum / frameCount), width / 2, 10);
+    showText();
+    
   }
 }
 
@@ -135,14 +138,34 @@ function titleScreen() {
   textSize(15);
   text("Click to Start", width * 0.5, height * 0.5);
   pop();
-  frameRateSum += frameRate();
-  textSize(11);
-  text("FPS: " + round(frameRateSum / frameCount), width / 2, 10);
+  showText()
+  if(keyIsDown(32)){
+      gameState = "ingame";
+     }
+}
+
+function showText(){
+  push()
+  strokeWeight(2);
+  stroke(255);
+  fill(0);
+    frameRateSum += frameRate();
+    //frameRates.push(frameRateSum += frameRate());
+    //if(frameRates.length > 25){
+    //  frameRates.splice(0,1)
+    //}
+    textSize(11);
+  textAlign(RIGHT)
+    text("FPS: " + round(frameRateSum / frameCount), width-5, 15);
+    text("World "+wld+"–"+lvl, width-5, 25);
+  pop()
 }
 
 function resetCamera() {
-  camera.x = 0.5 - width / 2 / gridSize;
-  camera.y = -height / 2 / gridSize;
+  camera.x = (player.x * gridSize - gridSize / 2 - width / 2) / gridSize;
+  camera.y = ((player.y-.5) * gridSize - gridSize / 2 - height / 2) / gridSize;
+  //camera.x = 0.5 - width / 2 / gridSize;
+  //camera.y = -height / 2 / gridSize;
   camera.newX = camera.x;
   camera.newY = camera.y;
 }
@@ -296,6 +319,7 @@ function mousePressed() {
     setTimeout(function() {
       gameState = "ingame";
     }, 50);
+    return
   }
   hoverHighlightOn = true;
   player.newX = ceil(mouseX / gridSize + camera.x);
@@ -310,5 +334,5 @@ function mousePressed() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  gridSize = (windowWidth + windowHeight) * 0.036;
+  gridSize = (windowWidth + windowHeight) * 0.05;
 }
