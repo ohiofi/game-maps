@@ -33,7 +33,9 @@
         display: flex;
         align-items: center;
       }
+      /* the grid */
       .div3 {
+        padding:5px;
         grid-area: 2 / 2 / 3 / 3;
       }
       .div4 {
@@ -49,6 +51,11 @@
     </style>
   </head>
   <body onload="buildMapSelector()">
+    <select id="levelSelector" onchange="loadMap(this.value)">
+      <option value="-1">Select Map Preset</option>
+      <option value="-2">Empty 10x10</option>
+    </select>
+    <br>
     <div class="parent">
       <div class="div1">
         <button onclick="addRowTop()">
@@ -81,16 +88,12 @@
       </div>
     </div>
     <br>
-    <select id="levelSelector" onchange="loadMap(this.value)">
-      <option value="-1">Select Map Preset</option>
-      <option value="-2">Empty 10x10</option>
-    </select>
-    <p>Current:</p>
+    <p>Current Material:</p>
 
     <div id="materialSelector"></div>
 
     <button id="compile">Compile Map</button>
-
+    <br><br>
     <pre id="output"></pre>
 
     <script>
@@ -154,12 +157,14 @@
       };
       materials.forEach(addMaterialSelector);
       let current = document.getElementById("current");
-      let brickButton = document.getElementById("brick");
-
       let grid = document.getElementById("grid");
       let compile = document.getElementById("compile");
       compile.addEventListener("click", () => {
         let output = document.getElementById("output");
+        if(playerSpawn == null || !hasPlayerSpawn()){
+          output.innerHTML = "Player Spawn location is missing!";
+          return
+        }
         output.innerHTML = "";
         let all = Array.from(grid.querySelectorAll("div"));
         let result = "[";
@@ -168,9 +173,11 @@
           for (let col = 0; col < width; col++) {
             result += all[row * width + col].dataset["material"];
           }
-          result += '", <br>';
+          if(row < height-1){
+            result += '", <br>';
+          }
         }
-        output.innerHTML = result + "]";
+        output.innerHTML = result + '"]';
       });
       const setCharAt = (str, index, chr) => {
         if (str && index > str.length - 1) return str;
@@ -208,6 +215,10 @@
         }
       };
       function setPlayerSpawn(row, col) {
+        if (row == null || col == null){
+          playerSpawn = null
+          return
+        }
         if (playerSpawn) {
           // only allow 1 player spawn point, remove old spawn point
           map[playerSpawn.row] = setCharAt(
@@ -219,6 +230,16 @@
         } else {
           playerSpawn = { row: row, col: col };
         }
+      }
+      function hasPlayerSpawn(){
+        for (let row = 0; row < height; row++) {
+          for (let col = 0; col < width; col++) {
+            if (col < map[row].length && map[row][col] == "♀") {
+              return true
+            }
+          }
+        }
+        return false
       }
       function drawGrid() {
         grid.innerHTML = "";
@@ -281,8 +302,8 @@
         addColumn();
       };
       function loadMap(idNum) {
-        console.log(idNum)
-        drawGrid();
+        setPlayerSpawn(null,null)
+        //drawGrid();
         if(idNum >= 0){
           let count=0;
           for (let world = 0; world < maps.length; world++) {
@@ -347,6 +368,9 @@
             dropdown.appendChild(opt)
           }
         }
+        document.getElementById("Brick").checked=true;
+        currentMaterial = "=";
+        grid.style.background = "red";
         loadMap(-1);
       }
     </script>

@@ -87,8 +87,20 @@ let maps = [
       "=============================♀===",
       "                            =0=  "
     ],
+    [ // world 0 level 2, sand background tile
+      "00000000000",
+"00=======00",
+"0=   =   =0",
+"0= ===== =0",
+"0=   =   =0",
+"0=== = ===0",
+"0=   =   =0",
+"0= ===== =0",
+"0=       =0",
+"00===♀===00",
+"00000000000"],
     [
-      // world 0 level 2, sand background tile
+      // world 0 level 3, sand background tile
 
       " =4============+=====================r=============",
       "=                        r+           r            =",
@@ -141,7 +153,7 @@ let maps = [
       "        =====================0==================="
     ],
     [
-      // world 0 level 3, cave background tile
+      // world 0 level 4, cave background tile
 
       "=====================================================================================================",
       "=     =   =     =   =   =             =     =     =     =         =   =       =     =       =       =",
@@ -192,7 +204,7 @@ let maps = [
       "====================================================================================================="
     ],
     [
-      // world 0 level 4, by https://github.com/hgcassiopeia
+      // world 0 level 5, by https://github.com/hgcassiopeia
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
       "r         k                                                     rr",
       "rrrrrrrrrrrrrrrrrrrrrrr1rrrrrrr2rrrrrr0rrrrrr3rrrrrrrrrr   rrrrrrr",
@@ -208,7 +220,7 @@ let maps = [
       "rrrrrrrrr6rrrrrrrrrrrrrr3rrrrrrrrrrrrr2rrrrrrrrrrrrrr1rrrrrr5rrrrr"
     ],
     [
-      // world 0 level 5, by https://github.com/gersongams
+      // world 0 level 6, by https://github.com/gersongams
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
       "r                            kTTTT                               TTT G         kr",
       "r                             TTTT                               TTT            r",
@@ -249,7 +261,7 @@ let maps = [
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
     ],
     [
-      // world 0 level 6, by https://github.com/Grigory57
+      // world 0 level 7, by https://github.com/Grigory57
       "rrrrrrrccrrrrrrrTTTTTTTTtTTTTTTrrrrrrrrrrrrrrrrrrr============T",
       "T                                      rrrrrrrrrr           k  r",
       "T   rrrrrrrrrcccrrrrrrrrrrrrrrrrrrrr               rrrrrrrrrrrrr",
@@ -271,7 +283,7 @@ let maps = [
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
     ],
     [
-      // world 0 level 7, by https://github.com/GudeTamma
+      // world 0 level 8, by https://github.com/GudeTamma
       "cccccccccccccccccccccccccT6Tcccccccc5cccccccccccccccc",
       "c  Tgggggggggggggggg  TTT   TTT      gggggggggggggggc",
       "c                       T   T                       c",
@@ -300,8 +312,8 @@ let maps = [
       "rrrrrrrrrrccccccccccccccTT8TTcccccccccccccccccrrrrrrr"
     ],
     [
-      // world 0 level 8
-      // world 0 level 8 sand background tile, by https://github com/ejilee
+      // world 0 level 9
+      // world 0 level 9 sand background tile, by https://github com/ejilee
       "=====================================^^^^^^^========^^^=======gg   ",
       "=    gtT T gT tT ttTttT r Tgrrrrr ttT=======Tgtggggt===gTkTrTrtt   ",
       "=   grT gtTg TTttTT rTttTgtgrwwwrg tg=00==0=gggggggg=0=ggrt+tTtrtg ",
@@ -343,7 +355,7 @@ let maps = [
       "ccccccccccccccccccccccccccccccccccccrrrrrrrrccccrtrtgT+t+tTt+r+Tr+T"
     ],
     [
-      // world 0 level 9
+      // world 0 level 10
       "TTtTT+T TtT+T tTtTtT tT+TtT+TtT+TtT+T   tTTt^^^   ^^^ccctT+TtT+TtTt T+TtT+TtT tT",
       "t     T+TtT+TtTtTTtT+T tT+TtTT       TtT    ^^^   ^^^   T          tT tTTtT tT+TtT+TtT+TtT tT+TT tT tTTtT+TtT tTtT+TtT tT",
       "t     tTT   tT+TtTTtT+TtTTtTT               ===^^^===     ^^^^^^^^     TtT+TtTT tTtTtT tT+TtT+TtT+TtT+T tT+TtT+TtT+TtT+T tT+TtT+TtTtT",
