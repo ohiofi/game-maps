@@ -2,8 +2,9 @@
 
 An untitled HTML5 RPG game in development
 
-Demo here: [ohiofi.github.io/game-maps/index.html](https://ohiofi.github.io/game-maps/index.html)
-Map Maker here: [ohiofi.github.io/game-maps/mapMaker.html](https://ohiofi.github.io/game-maps/mapMaker.html)
+- Demo here: [ohiofi.github.io/game-maps/index.html](https://ohiofi.github.io/game-maps/index.html)
+
+- Map Maker here: [ohiofi.github.io/game-maps/mapMaker.html](https://ohiofi.github.io/game-maps/mapMaker.html)
 
 ```
 MAP SYMBOLS:
