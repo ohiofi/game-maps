@@ -19,10 +19,12 @@ let gameState = "titlescreen";
 let myFont;
 let startButton;
 
+
 function preload() {
   images.water = loadImage(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fwater2.png?v=1572205689437"
   );
+  images.water2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fwater1.png?v=1572196947019")
   images.roof = loadImage(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Froof1.png?v=1571803414377"
   );
@@ -47,6 +49,7 @@ function preload() {
   images.deadtree = loadImage(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fspookytree02.png?v=1571943082745"
   );
+  images.deadtree2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fspookytree3.png?v=1573012947346");
   images.tallgrass = loadImage(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2FtallGrass02.png?v=1535253104480"
   );
@@ -83,6 +86,8 @@ function preload() {
   images.chicken1 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fchicken1.png?v=1572456558675");
   images.chicken2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fchicken2.png?v=1572456560191");
   images.stump = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fstump_fixed.png?v=1572457199834");
+  images.stump2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fstump2.png?v=1573012905139");
+  images.black = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fblack.png?v=1573012894585");
   myFont = loadFont(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2FpressStart.ttf?v=1571872754647"
   );
@@ -288,7 +293,7 @@ function keyPressed() {
             j < world[wld][lvl].map[i].length
           ) {
             if (world[wld][lvl].map[i][j]) {
-              
+
               //if (world[wld][lvl].objects[i] instanceof TallGrass) {
               if (
                 world[wld][lvl].map[i][j].y == player.newY &&
