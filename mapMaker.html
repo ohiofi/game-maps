@@ -283,6 +283,9 @@
       }
       function addRowTop() {
         map.unshift(" ".repeat(width + 1));
+        if(playerSpawn){
+          playerSpawn.row++;
+        }
         addRow();
       }
       function addColumn() {
