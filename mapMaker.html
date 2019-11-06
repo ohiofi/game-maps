@@ -300,6 +300,9 @@
         for (let row = 0; row < height; row++) {
           map[row] = " " + map[row];
         }
+        if(playerSpawn){
+          playerSpawn.row++;
+        }
         addColumn();
       };
       function loadMap(idNum) {
