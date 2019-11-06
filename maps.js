@@ -15,6 +15,7 @@ t : small tree
 T : big tree
 + : dead tree
 w : water
+| : black
 0 : door to current world level 0
 1 : door to current world level 1
 2 : door to current world level 2
@@ -28,6 +29,7 @@ w : water
 ① : warp to world 1-0
 
 */
+
 let maps = [
   [
     // begin world 0
@@ -35,16 +37,16 @@ let maps = [
       // world 0 level 0, grass background tile
 
       "rrcccccccccccc+t+ ++T++  +++ ++T+ T+++ ++T+ ^^^==============9===①=======",
-      "r♀      gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg     p   p   T",
-      "r     k   h    r         +G   G  gGgg G+g   ===  ppppppppppppppppptTTtTt",
-      "r t  t t k  t      h           g            =7=  p        TttT   tTTtTT",
+      "r       gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg     p   p   T",
+      "r     k        r         +G   G  gGgg G+g   ===  ppppppppppppppppptTTtTt",
+      "r t  t t k  t                  g            =7=  p        TttT   tTTtTT",
       "r   t  gt  t+ g  r      + G  gG   G  + ppppppppppp tT    TtTt   TTtTtTTtTT",
       " r   t T    ++  t          +    +  T  G   ^^^ gp ttT   ttTTtT  TtTTtTT",
       "r  t    t  gt g          g+gg G  +Gg  +g ^^^^^ p TtTt    ^^^   tTtTTtTT",
-      "r t t^   +   gT               g+     +  g=0=0= p  t tT   ^^^    tTt",
+      "r t t^   +   gT               g+     +  g=|=|= p  t tT   ^^^    tTt",
       "r   ^^^     gt r      gTg  + gG + G     t===== p tTT     ===    TTtTt",
       "r  ^^^^^   ^^^         ^^^              t==6== p  TtT    =8=   TtTt",
-      "r  =0=0=  ^^^^^r     g^^^^^    ^^^     gr  ppppp   tTTt  pp T   TtTT",
+      "r  =|=|=  ^^^^^r     g^^^^^    ^^^     gr  ppppp   tTTt  pp T   TtTT",
       "r T=====  =====    rr =====rg ^^^^^        +gg pg  Tt  ppp tTTT   tTtTtwwwww",
       "r T=1===  ==2==r  rccc==4==T  =====g   t    t  p  TTtTtp  TTtTTtT   twww",
       "r   ppppppppppppprcc3ccrp     ==5==          T pp grT  pTtTtTTt    www",
@@ -63,44 +65,40 @@ let maps = [
 
     [
       // world 0 level 1, cave background tile
-
-      "=================================",
-      "=         =                     =",
-      "=     =   =     ===========     =",
-      "=     =         =         =     =",
-      "=== ========== ==== === ===== ===",
-      "=     = ===     =     = =4=     =",
-      "=     = =3=           =r  =     =",
-      "=     =   =     =     =   =     =",
-      "== ===== ============== ======= =",
-      "=     =         =         =     =",
-      "=     =   =     =     =   =     =",
-      "=     =   =           =   =     =",
-      "==== === ============== === =====",
-      "=     =   =           = =2=     =",
-      "=     =   =     =     =   =     =",
-      "=         =     =     =   =     =",
-      "== =========== ==== =========== =",
-      "=     =         =     =         =",
-      "=         =     =         =     =",
-      "=     =   =     =     =   =     =",
-      "=============================♀===",
-      "                            =0=  "
+      "|||||||||||||||||||||||||||||||||||||||||||||||||||||",
+      "|||||||||||||||||||||||||||||||||||||||||||||||||||||",
+      "|||||||||||||||||||||||||||||||||||||||||||||||||||||",
+      "|||||||||||||||||||||||||||||||||||||||||||||||||||||",
+      "|||||||||||||||||||||||||||||||||||||||||||||||||||||",
+      "||||||||||=================================||||||||||",
+      "||||||||||=         =                     =||||||||||",
+      "||||||||||=     =   =     ===========     =||||||||||",
+      "||||||||||=     =         =         =     =||||||||||",
+      "||||||||||=== ========== ==== === ===== ===||||||||||",
+      "||||||||||=     = ===     =     = =4=     =||||||||||",
+      "||||||||||=     = =3=           =r  =     =||||||||||",
+      "||||||||||=     =   =     =     =   =     =||||||||||",
+      "||||||||||== ===== ============== ======= =||||||||||",
+      "||||||||||=     =         =         =     =||||||||||",
+      "||||||||||=     =   =     =     =   =     =||||||||||",
+      "||||||||||=     =   =           =   =     =||||||||||",
+      "||||||||||==== === ============== === =====||||||||||",
+      "||||||||||=     =   =           = =2=     =||||||||||",
+      "||||||||||=     =   =     =     =   =     =||||||||||",
+      "||||||||||=         =     =     =   =     =||||||||||",
+      "||||||||||== =========== ==== =========== =||||||||||",
+      "||||||||||=     =         =     =         =||||||||||",
+      "||||||||||=         =     =         =     =||||||||||",
+      "||||||||||=     =   =     =     =   =     =||||||||||",
+      "||||||||||=============================♀===||||||||||",
+      "||||||||||||||||||||||||||||||||||||||=0=||||||||||||",
+      "|||||||||||||||||||||||||||||||||||||||||||||||||||||",
+      "|||||||||||||||||||||||||||||||||||||||||||||||||||||",
+      "|||||||||||||||||||||||||||||||||||||||||||||||||||||",
+      "|||||||||||||||||||||||||||||||||||||||||||||||||||||",
     ],
-    [ // world 0 level 2, sand background tile
-      "00000000000",
-"00=======00",
-"0=   =   =0",
-"0= ===== =0",
-"0=   =   =0",
-"0=== = ===0",
-"0=   =   =0",
-"0= ===== =0",
-"0=       =0",
-"00===♀===00",
-"00000000000"],
     [
-      // world 0 level 3, sand background tile
+      // world 0 level 2, sand background tile
 
       " =4============+=====================r=============",
       "=                        r+           r            =",
@@ -153,7 +151,7 @@ let maps = [
       "        =====================0==================="
     ],
     [
-      // world 0 level 4, cave background tile
+      // world 0 level 3, cave background tile
 
       "=====================================================================================================",
       "=     =   =     =   =   =             =     =     =     =         =   =       =     =       =       =",
@@ -204,7 +202,7 @@ let maps = [
       "====================================================================================================="
     ],
     [
-      // world 0 level 5, by https://github.com/hgcassiopeia
+      // world 0 level 4, by https://github.com/hgcassiopeia
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
       "r         k                                                     rr",
       "rrrrrrrrrrrrrrrrrrrrrrr1rrrrrrr2rrrrrr0rrrrrr3rrrrrrrrrr   rrrrrrr",
@@ -220,7 +218,7 @@ let maps = [
       "rrrrrrrrr6rrrrrrrrrrrrrr3rrrrrrrrrrrrr2rrrrrrrrrrrrrr1rrrrrr5rrrrr"
     ],
     [
-      // world 0 level 6, by https://github.com/gersongams
+      // world 0 level 5, by https://github.com/gersongams
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
       "r                            kTTTT                               TTT G         kr",
       "r                             TTTT                               TTT            r",
@@ -261,7 +259,7 @@ let maps = [
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
     ],
     [
-      // world 0 level 7, by https://github.com/Grigory57
+      // world 0 level 6, by https://github.com/Grigory57
       "rrrrrrrccrrrrrrrTTTTTTTTtTTTTTTrrrrrrrrrrrrrrrrrrr============T",
       "T                                      rrrrrrrrrr           k  r",
       "T   rrrrrrrrrcccrrrrrrrrrrrrrrrrrrrr               rrrrrrrrrrrrr",
@@ -283,7 +281,7 @@ let maps = [
       "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
     ],
     [
-      // world 0 level 8, by https://github.com/GudeTamma
+      // world 0 level 7, by https://github.com/GudeTamma
       "cccccccccccccccccccccccccT6Tcccccccc5cccccccccccccccc",
       "c  Tgggggggggggggggg  TTT   TTT      gggggggggggggggc",
       "c                       T   T                       c",
@@ -312,8 +310,8 @@ let maps = [
       "rrrrrrrrrrccccccccccccccTT8TTcccccccccccccccccrrrrrrr"
     ],
     [
-      // world 0 level 9
-      // world 0 level 9 sand background tile, by https://github com/ejilee
+      // world 0 level 8
+      // world 0 level 8 sand background tile, by https://github com/ejilee
       "=====================================^^^^^^^========^^^=======gg   ",
       "=    gtT T gT tT ttTttT r Tgrrrrr ttT=======Tgtggggt===gTkTrTrtt   ",
       "=   grT gtTg TTttTT rTttTgtgrwwwrg tg=00==0=gggggggg=0=ggrt+tTtrtg ",
@@ -355,7 +353,7 @@ let maps = [
       "ccccccccccccccccccccccccccccccccccccrrrrrrrrccccrtrtgT+t+tTt+r+Tr+T"
     ],
     [
-      // world 0 level 10
+      // world 0 level 9
       "TTtTT+T TtT+T tTtTtT tT+TtT+TtT+TtT+T   tTTt^^^   ^^^ccctT+TtT+TtTt T+TtT+TtT tT",
       "t     T+TtT+TtTtTTtT+T tT+TtTT       TtT    ^^^   ^^^   T          tT tTTtT tT+TtT+TtT+TtT tT+TT tT tTTtT+TtT tTtT+TtT tT",
       "t     tTT   tT+TtTTtT+TtTTtTT               ===^^^===     ^^^^^^^^     TtT+TtTT tTtTtT tT+TtT+TtT+TtT+T tT+TtT+TtT+TtT+T tT+TtT+TtTtT",
@@ -415,31 +413,7 @@ let maps = [
       "TTtTTtTtTTtTTTTtTTtTTtTtTTttTTTtTTtTTtTtTTtTTTTtTTtTTtTtTTtTTTT"
     ],
     [
-      // world 1 level 1, by https://github.com/not-arzuaga
-
-      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "r                rrrrrrrrr        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "r                rrrrrrrrrr      rrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwrrrrrr",
-      "r  rrrrrrrrrrrr  rrrrrrrrrrr    rrrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwrr",
-      "r  rrk      rrr  rrrrrrrrrrrr  rrrrrrrrrrrrrrrrww             wwrr",
-      "r  rrrrrrr  rrr  rrrrrrrrrrrr  rrrrrrrrrrrrrrrrww             wwrr",
-      "r           rrr                                               wwrr",
-      "rrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrww             wwrr",
-      "rrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrww             wwrr",
-      "rrr              rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwrr",
-      "rrr  rrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwrrrrrr",
-      "rrr  rrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "rrr  rrrrrrrrrr        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "rrr  rrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "rrr  rrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "rrr  rrrrrrrrrrrrrrrr      rrrrrrrrrrr      rrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "rrr  rrrrrrrrrrrrrrrrrrrr                               rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "rrr     G G G G G  rrrrrr  rrrrrrrrrr        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr                      r",
-      "rrr             G  rrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr                      r",
-      "rrr     G G G G G  rrrrrr                                          pppppppppppppppppppppppppppppppp2",
-      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr                      r",
-      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr         rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr                      r",
-      "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      // world 1 level 1
     ],
     [
       // world 1 level 2

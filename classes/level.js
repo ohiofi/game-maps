@@ -65,7 +65,20 @@ class Level {
               1, // size
               Sprite.randomDirection(), // direction
               round(random()), // flipY
-              images.water
+              Sprite.choice([images.water,images.water2])
+            )
+          );
+          break;
+        case "|":
+          this.map[tempRowNum].push(
+            new Wall(
+              column, // x
+              tempRowNum, // y
+              0, // z
+              1, // size
+              1, // direction
+              false, // flipY
+              images.black
             )
           );
           break;
@@ -170,7 +183,7 @@ class Level {
                 1.6,
                 Sprite.randomDirection(),
                 false, // flipY
-                images.deadtree
+                Sprite.choice([images.deadtree,images.deadtree2])
               )
             );
           } else {
@@ -182,7 +195,7 @@ class Level {
                 1.2,
                 Sprite.randomDirection(),
                 false, // flipY
-                images.stump
+                Sprite.choice([images.stump,images.stump2])
               )
             );
           }

@@ -7,6 +7,9 @@ class Sprite {
   static maxZ() {
     return 4;
   }
+  static choice(myArray){
+    return myArray[Math.floor(Math.random() * myArray.length)]
+  }
   constructor(_x, _y, _z, _size, _direction, _flipY, _imgArray) {
     this.x = _x;
     this.y = _y;
@@ -34,8 +37,8 @@ class Sprite {
     );
     scale(this.direction, 1);
     }
-    
-    
+
+
 
     image(
       this.imgArray[this.currentImg],
