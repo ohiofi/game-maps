@@ -37,6 +37,16 @@ class Level {
                 [images.cat1, images.cat2]
               )
             );
+              this.movers[tempRowNum].push(
+                new Mover(
+                  column,
+                  tempRowNum,
+                  1,
+                  0.65,
+                  Sprite.randomDirection(),
+                [images.dog1,images.dog2,images.dog2,images.dog1,images.dog3,images.dog3]
+              )
+            );
             this.map[tempRowNum].push(false);
             break;
           case "h":
@@ -172,7 +182,7 @@ class Level {
             );
             break;
           case "+":
-            if (random() > 0.5) {
+            if (random() < 0.75) { // 75%
               this.map[tempRowNum].push(
                 new Wall(
                   column,
@@ -184,7 +194,7 @@ class Level {
                   Sprite.choice([images.deadtree,images.deadtree2])
                 )
               );
-            } else {
+            } else { // 25%
               this.map[tempRowNum].push(
                 new Wall(
                   column,

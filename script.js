@@ -83,6 +83,9 @@ function preload() {
   images.cat2 = loadImage(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fcat2.png?v=1571710106399"
   );
+  images.dog1 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fdogwalk42-1.png.png?v=1573142647907")
+  images.dog2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fdogwalk42-2.png.png?v=1573142649147")
+  images.dog3 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fdogwalk42-3.png.png?v=1573142651076")
   images.chicken1 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fchicken1.png?v=1572456558675");
   images.chicken2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fchicken2.png?v=1572456560191");
   images.stump = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fstump_fixed.png?v=1572457199834");
