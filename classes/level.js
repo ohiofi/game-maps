@@ -127,7 +127,7 @@ class Level {
                 0,
                 1.08,
                 Sprite.randomDirection(),
-                round(random()), // flipY
+                false, // flipY
                 images.cliff
               )
             );

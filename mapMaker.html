@@ -190,6 +190,9 @@
       const getFontColorForMaterial = materialChar =>
         materials.find(m => m.material === materialChar).fontcolor;
       const setMaterial = (element, material) => {
+        if(element.dataset["material"]=="♀"){
+          setPlayerSpawn(null, null);
+        }
         let bgcolor = "white";
         material = material || " ";
         element.dataset["material"] = material;
