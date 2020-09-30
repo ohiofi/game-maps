@@ -38,7 +38,7 @@ function preload() {
   );
   images.chicken1 = loadImage("https://raw.githubusercontent.com/ohiofi/game-maps/master/images/chicken1.png");
   images.chicken2 = loadImage("https://raw.githubusercontent.com/ohiofi/game-maps/master/images/chicken2.png");
-  
+
   images.cobblestone = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cobblestone01.png"
   );
@@ -58,7 +58,7 @@ function preload() {
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/spookytree02.png"
   );
   images.deadtree2 = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/spookytree02.png"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/spookytree03.png"
   );
   images.tallgrass = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/tallgrass02.png"
