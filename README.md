@@ -1,10 +1,20 @@
 # game-maps
 
-An untitled HTML5 RPG game in development
+An untitled HTML5 RPG game 🎮️ in development 🧑‍💻️
 
-- Demo here: [ohiofi.github.io/game-maps/index.html](https://ohiofi.github.io/game-maps/index.html)
+- ▶️ Demo here: [ohiofi.github.io/game-maps/index.html](https://ohiofi.github.io/game-maps/index.html)
 
-- Map Maker here: [ohiofi.github.io/game-maps/mapMaker.html](https://ohiofi.github.io/game-maps/mapMaker.html)
+- 🗺️ Map Maker here: [ohiofi.github.io/game-maps/mapMaker.html](https://ohiofi.github.io/game-maps/mapMaker.html)
+
+
+Any volunteer can add more maps to the game if they like. Maps could be maze-like ([example](http://mikesrpgcenter.com/ffantasy/maps/waterfallcave.html)) or create a simple RPG-town ([example](http://mikesrpgcenter.com/ffantasy/maps/coneria.html)).
+
+Info and Guidelines:
+
+- 🎃 You must be familiar with Javascript strings and arrays
+- 🎃 You must follow the Map Symbols in the README for map creation
+- 🎃 Add your map to the maps.js file
+
 
 ```
 MAP SYMBOLS:
