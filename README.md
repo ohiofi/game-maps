@@ -1,6 +1,6 @@
 # game-maps
 
-An untitled HTML5 RPG game 🎮️ in development 🧑‍💻️
+An untitled HTML5 RPG game 🎮️ in development 👩‍💻🧑‍💻️
 
 - ▶️ Demo here: [ohiofi.github.io/game-maps/index.html](https://ohiofi.github.io/game-maps/index.html)
 
