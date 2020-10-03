@@ -413,7 +413,34 @@ let maps = [
       "TTtTTtTtTTtTTTTtTTtTTtTtTTttTTTtTTtTTtTtTTtTTTTtTTtTTtTtTTtTTTT"
     ],
     [
-      // world 1 level 1
+      // World 1 level 1, by https://github.com/puentejose
+      ["TtTttTtTtTTtttTTtTTttttttTTttTTTTTTTTTTTTTTTT                  ", 
+      "t                 T            tT      TTTTTTTTTTTt            ", 
+      "T ♀    t  t            T       T      +         ++t            ", 
+      "T                                                +t            ", 
+      "tt   t T    tTtTt   Ttt0  tt     T        t       t            ", 
+      "Ttt       t TTttt  ttTTt TTttt       T        T   t            ", 
+      "Tt  T  t   TTTttttttTttT TTTTtt                   t            ", 
+      "T         TTtT Tttt  TTt ttTTTt   t               t            ", 
+      "T          tt  TtT   tT   tT T            g       ttTtTTtTttTTT", 
+      "t    T                         + + +   t      g              +T", 
+      "T       t                T     G G G      w w   w  h ww   w   T", 
+      "T              t   t              g       w   w      ww w     T", 
+      "t  t        T                  G G G             gw        g  T", 
+      "T       w                              T      g  www          T", 
+      "T      wwwwgw h  T    T     T  GgG G        T                 T", 
+      "T      gwwww        t                                 g  T    T", 
+      "T  T   wwwwwg           t                     t               T", 
+      "T        www   T                        t        tt           T", 
+      "T        wggw                          TTT      tTtT    T     T", 
+      "T                  t   t  + t     T    TtT      tTtT          T", 
+      "T    t            Tt + tt   T          TtT   T  tTtT          T", 
+      "tTT     T          t   tt 1 TT        ttTTT     TtTtT         T", 
+      "TTtT        t   T   TtTtTTttT          tTT               T    T", 
+      "TT                                            +             ++T", 
+      "TT +       t  t          t        T                   +     +TT", 
+      "TT    TTTTT      t                   +           +  +++     +TT", 
+      "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"]
     ],
     [
       // world 1 level 2
