@@ -22,8 +22,8 @@ let startButton;
 
 function preload() {
 
-  images.roof = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/roof1.png"
+  images.bigtree = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/bigtree01.png"
   );
   images.black = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/black.png"
@@ -37,24 +37,20 @@ function preload() {
   images.cat2 = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cat2.png"
   );
+  images.cavebg = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cavetile.png"
+  );
   images.chicken1 = loadImage("https://raw.githubusercontent.com/ohiofi/game-maps/master/images/chicken1.png");
   images.chicken2 = loadImage("https://raw.githubusercontent.com/ohiofi/game-maps/master/images/chicken2.png");
-
-  images.cobblestone = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cobblestone01.png"
-  );
   images.cliff = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cliff.png"
   );
-  images.rock = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/bigrock01.png"
+  images.cobblestone = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cobblestone01.png"
   );
-  images.smalltree = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/smalltree2.png"
-  );
-  images.bigtree = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/bigtree01.png"
-  );
+
+
+
   images.deadtree = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/spookytree02.png"
   );
@@ -62,21 +58,15 @@ function preload() {
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/spookytree03.png"
   );
   images.deadtree2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fspookytree3.png?v=1573012947346");
-  images.tallgrass = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/tallgrass02.png"
-  );
+
   images.gravestone = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/pixelgrave02.png"
   );
   images.grassbg = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/grass1.png"
   );
-  images.sandbg = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/sandtile.png"
-  );
-  images.cavebg = loadImage(
-    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cavetile.png"
-  );
+
+
   images.hero1 = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/heroIdle.png"
   );
@@ -89,8 +79,24 @@ function preload() {
   images.hero4 = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/heroRun4.png"
   );
+  images.rock = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/bigrock01.png"
+  );
+
+  images.roof = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/roof1.png"
+  );
+  images.sandbg = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/sandtile.png"
+  );
+  images.smalltree = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/smalltree2.png"
+  );
   images.stump = loadImage("https://raw.githubusercontent.com/ohiofi/game-maps/master/images/stump2.png");
   images.stump2 = loadImage("https://raw.githubusercontent.com/ohiofi/game-maps/master/images/stump2.png");
+  images.tallgrass = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/tallgrass02.png"
+  );
   images.water = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/water2.png"
   );
