@@ -62,100 +62,128 @@ class Level {
               )
             );
 
-            this.map[tempRowNum].push(false);
-            break;
-          case "w":
-            this.map[tempRowNum].push(
-              new Wall(
-                column, // x
-                tempRowNum, // y
-                0, // z
-                1, // size
-                Sprite.randomDirection(), // direction
-                round(random()), // flipY
-                Sprite.choice([images.water,images.water2])
-              )
-            );
-            break;
-          case "|":
-            this.map[tempRowNum].push(
-              new Wall(
-                column, // x
-                tempRowNum, // y
-                0, // z
-                1, // size
-                1, // direction
-                false, // flipY
-                images.black
-              )
-            );
-            break;
-          case "p":
-            this.map[tempRowNum].push(
-              new Sprite(
-                column, // x
-                tempRowNum, // y
-                0, // z
-                1, // size
-                Sprite.randomDirection(), // direction
-                round(random()), // flipY
-                [images.cobblestone]
-              )
-            );
-            break;
-          case "=":
-            this.map[tempRowNum].push(
-              new Wall(
-                column, // x
-                tempRowNum, // y
-                1, // z
-                1.25, // size
-                Sprite.randomDirection(), // direction
-                round(random()), // flipY
-                images.brick
-              )
-            );
-            break;
-          case "^":
-            this.map[tempRowNum].push(
-              new Wall(
-                column,
-                tempRowNum,
-                3, // z
-                1.25, // size
-                Sprite.randomDirection(), // direction
-                round(random()), // flipY
-                images.roof
-              )
-            );
-            break;
-          case "c":
-            this.map[tempRowNum].push(
-              new Wall(
-                column,
-                tempRowNum,
-                0,
-                1.08,
-                Sprite.randomDirection(),
-                false, // flipY
-                images.cliff
-              )
-            );
-            break;
-          case "r":
-            this.map[tempRowNum].push(
-              new Wall(
-                column,
-                tempRowNum,
-                1,
-                1.3,
-                Sprite.randomDirection(),
-                false, // flipY
-                images.rock
-              )
-            );
-            break;
-          case "T":
+          this.map[tempRowNum].push(false);
+          break;
+        case "w":
+          this.map[tempRowNum].push(
+            new Wall(
+              column, // x
+              tempRowNum, // y
+              0, // z
+              1, // size
+              Sprite.randomDirection(), // direction
+              round(random()), // flipY
+              Sprite.choice([images.water,images.water2])
+            )
+          );
+          break;
+        case "|":
+          this.map[tempRowNum].push(
+            new Wall(
+              column, // x
+              tempRowNum, // y
+              0, // z
+              1, // size
+              1, // direction
+              false, // flipY
+              images.black
+            )
+          );
+          break;
+        case "p":
+          this.map[tempRowNum].push(
+            new Sprite(
+              column, // x
+              tempRowNum, // y
+              0, // z
+              1, // size
+              Sprite.randomDirection(), // direction
+              round(random()), // flipY
+              [images.cobblestone]
+            )
+          );
+          break;
+        case "=":
+          this.map[tempRowNum].push(
+            new Wall(
+              column, // x
+              tempRowNum, // y
+              1, // z
+              1.25, // size
+              Sprite.randomDirection(), // direction
+              round(random()), // flipY
+              images.brick
+            )
+          );
+          break;
+        case "^":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              3, // z
+              1.25, // size
+              Sprite.randomDirection(), // direction
+              round(random()), // flipY
+              images.roof
+            )
+          );
+          break;
+        case "c":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              0,
+              1.08,
+              Sprite.randomDirection(),
+              round(random()), // flipY
+              images.cliff
+            )
+          );
+          break;
+        case "r":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              1,
+              1.3,
+              Sprite.randomDirection(),
+              false, // flipY
+              images.rock
+            )
+          );
+          break;
+        case "T":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              2,
+              2.45,
+              Sprite.randomDirection(),
+              false, // flipY
+              images.bigtree
+            )
+          );
+          break;
+        case "t":
+          this.map[tempRowNum].push(
+            new Wall(
+              column,
+              tempRowNum,
+              2,
+              1.55,
+              Sprite.randomDirection(),
+              false, // flipY
+              images.smalltree
+            )
+          );
+          break;
+        case "+":
+          if (random() > 0.5) {
+
             this.map[tempRowNum].push(
               new Wall(
                 column,
@@ -164,7 +192,9 @@ class Level {
                 2.45,
                 Sprite.randomDirection(),
                 false, // flipY
-                images.bigtree
+
+                Sprite.choice([images.deadtree,images.deadtree2])
+
               )
             );
             break;
@@ -177,7 +207,9 @@ class Level {
                 1.55,
                 Sprite.randomDirection(),
                 false, // flipY
-                images.smalltree
+
+                Sprite.choice([images.stump,images.stump2])
+
               )
             );
             break;

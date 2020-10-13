@@ -21,76 +21,83 @@ let startButton;
 
 
 function preload() {
-  images.water = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fwater2.png?v=1572205689437"
-  );
-  images.water2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fwater1.png?v=1572196947019")
+
   images.roof = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Froof1.png?v=1571803414377"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/roof1.png"
+  );
+  images.black = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/black.png"
   );
   images.brick = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fwall2.png?v=1571262521867"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/wall2.png"
   );
+  images.cat1 = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cat1.png"
+  );
+  images.cat2 = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cat2.png"
+  );
+  images.chicken1 = loadImage("https://raw.githubusercontent.com/ohiofi/game-maps/master/images/chicken1.png");
+  images.chicken2 = loadImage("https://raw.githubusercontent.com/ohiofi/game-maps/master/images/chicken2.png");
+
   images.cobblestone = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fcobblestone01.png?v=1572401416762"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cobblestone01.png"
   );
   images.cliff = loadImage(
-    "https://cdn.glitch.com/bcd2d97a-a3a6-4c95-a869-471d86d9430d%2Fcliff02.png?v=1528858590669"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cliff.png"
   );
   images.rock = loadImage(
-    "https://cdn.glitch.com/bcd2d97a-a3a6-4c95-a869-471d86d9430d%2Fbigrock01.png?1528841600143"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/bigrock01.png"
   );
   images.smalltree = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fsmalltree2.png?v=1571978270992"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/smalltree2.png"
   );
   images.bigtree = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fbigtree01.png?v=1571943084106"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/bigtree01.png"
   );
   images.deadtree = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fspookytree02.png?v=1571943082745"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/spookytree02.png"
+  );
+  images.deadtree2 = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/spookytree03.png"
   );
   images.deadtree2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fspookytree3.png?v=1573012947346");
   images.tallgrass = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2FtallGrass02.png?v=1535253104480"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/tallgrass02.png"
   );
   images.gravestone = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fpixelgrave02.png?v=1571943081459"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/pixelgrave02.png"
   );
   images.grassbg = loadImage(
-    "https://cdn.glitch.com/bcd2d97a-a3a6-4c95-a869-471d86d9430d%2Fgrass.png?1528843673149"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/grass1.png"
   );
   images.sandbg = loadImage(
-    "https://cdn.glitch.com/bcd2d97a-a3a6-4c95-a869-471d86d9430d%2Fsandtile.png?1527781885943"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/sandtile.png"
   );
   images.cavebg = loadImage(
-    "https://cdn.glitch.com/bcd2d97a-a3a6-4c95-a869-471d86d9430d%2Fcavetile.png?1527781885891"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/cavetile.png"
   );
   images.hero1 = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2FheroIdle.png?v=1571943072021"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/heroIdle.png"
   );
   images.hero2 = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2FheroRun2.png?v=1571943076693"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/heroRun2.png"
   );
   images.hero3 = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2FheroRun3.png?v=1571943078357"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/heroRun3.png"
   );
   images.hero4 = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2FheroRun4.png?v=1571943080023"
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/heroRun4.png"
   );
-  images.cat1 = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fcat1.png?v=1571710106445"
+  images.stump = loadImage("https://raw.githubusercontent.com/ohiofi/game-maps/master/images/stump2.png");
+  images.stump2 = loadImage("https://raw.githubusercontent.com/ohiofi/game-maps/master/images/stump2.png");
+  images.water = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/water2.png"
   );
-  images.cat2 = loadImage(
-    "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fcat2.png?v=1571710106399"
+  images.water2 = loadImage(
+    "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/water2.png"
   );
-  images.dog1 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fdogwalk42-1.png.png?v=1573142647907")
-  images.dog2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fdogwalk42-2.png.png?v=1573142649147")
-  images.dog3 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fdogwalk42-3.png.png?v=1573142651076")
-  images.chicken1 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fchicken1.png?v=1572456558675");
-  images.chicken2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fchicken2.png?v=1572456560191");
-  images.stump = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fstump_fixed.png?v=1572457199834");
-  images.stump2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fstump2.png?v=1573012905139");
-  images.black = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fblack.png?v=1573012894585");
+
   myFont = loadFont(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2FpressStart.ttf?v=1571872754647"
   );
@@ -182,7 +189,7 @@ function usingKeys() {
 }
 
 function usingMouse() {
-  cursor(ARROW);
+  //cursor(ARROW);
 }
 
 function drawBackgroundTile() {
