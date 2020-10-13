@@ -22,6 +22,7 @@
         grid-template-rows: auto auto auto;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+
       }
       .div1 {
         grid-area: 1 / 2 / 2 / 3;
@@ -189,6 +190,9 @@
       const getFontColorForMaterial = materialChar =>
         materials.find(m => m.material === materialChar).fontcolor;
       const setMaterial = (element, material) => {
+        if(element.dataset["material"]=="♀"){
+          setPlayerSpawn(null, null);
+        }
         let bgcolor = "white";
         material = material || " ";
         element.dataset["material"] = material;
@@ -316,7 +320,7 @@
           for (let world = 0; world < maps.length; world++) {
             for (let level = 0; level < maps[world].length; level++) {
               if(idNum == count){
-                map = maps[world][level];
+                map = maps[world][level].map;
               }
               count++
             }

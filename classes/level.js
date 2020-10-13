@@ -1,58 +1,66 @@
 /*global Sprite,Mover,Wall,Door,TallGrass,loadImage,round,images,world,ceil,floor,dist,frameCount,random,maps*/
 class Level {
-  constructor(_worldNumber, _levelNumber) {
+  constructor(_worldNumber, _levelNumber, _showTitle, _bgImage) {
     this.worldNumber = _worldNumber;
     this.levelNumber = _levelNumber;
+    this.showTitleScreen = _showTitle;
     this.spawnPoint =
       {
         x:1,
         y:1
       };
-    this.backgroundTile = loadImage(
-      "https://cdn.glitch.com/bcd2d97a-a3a6-4c95-a869-471d86d9430d%2Fgrass.png?v=1528843673149"
-    );
-    //this.doors = [];
+    this.backgroundTile = _bgImage;
     this.map = [];
     this.movers = [];
   }
   addRow(newRowString) {
-    let tempRowNum = this.map.length;
-    this.map[tempRowNum] = [];
-    this.movers[tempRowNum] = [];
-    //for(let column in lineArray[row]){
-    for (let column = 0; column < newRowString.length; column++) {
-      switch (newRowString.charAt(column)) {
-        case "♀":
-          this.spawnPoint.x = column;
-          this.spawnPoint.y = tempRowNum;
-          this.map[tempRowNum].push(false);
-          break;
-        case "k":
-          this.movers[tempRowNum].push(
-            new Mover(
-              column,
-              tempRowNum,
-              1,
-              0.65,
-              Sprite.randomDirection(),
-              // mover class can't flipY
-              [images.cat1, images.cat2]
-            )
-          );
-          this.map[tempRowNum].push(false);
-          break;
-        case "h":
-          this.movers[tempRowNum].push(
-            new Mover(
-              column,
-              tempRowNum,
-              1,
-              0.5,
-              Sprite.randomDirection(),
-              // mover class can't flipY
-              [images.chicken1, images.chicken2]
-            )
-          );
+      let tempRowNum = this.map.length;
+      this.map[tempRowNum] = [];
+      this.movers[tempRowNum] = [];
+      //for(let column in lineArray[row]){
+      for (let column = 0; column < newRowString.length; column++) {
+        switch (newRowString.charAt(column)) {
+          case "♀":
+            this.spawnPoint.x = column;
+            this.spawnPoint.y = tempRowNum;
+            this.map[tempRowNum].push(false);
+            break;
+          case "k":
+            this.movers[tempRowNum].push(
+              new Mover(
+                column,
+                tempRowNum,
+                1,
+                0.65,
+                Sprite.randomDirection(),
+                // mover class can't flipY
+                [images.cat1, images.cat2]
+              )
+            );
+              this.movers[tempRowNum].push(
+                new Mover(
+                  column,
+                  tempRowNum,
+                  1,
+                  0.65,
+                  Sprite.randomDirection(),
+                [images.dog1,images.dog2,images.dog2,images.dog1,images.dog3,images.dog3]
+              )
+            );
+            this.map[tempRowNum].push(false);
+            break;
+          case "h":
+            this.movers[tempRowNum].push(
+              new Mover(
+                column,
+                tempRowNum,
+                1,
+                0.5,
+                Sprite.randomDirection(),
+                // mover class can't flipY
+                [images.chicken1, images.chicken2]
+              )
+            );
 
           this.map[tempRowNum].push(false);
           break;
@@ -175,94 +183,126 @@ class Level {
           break;
         case "+":
           if (random() > 0.5) {
-            this.map[tempRowNum].push(
-              new Wall(
-                column,
-                tempRowNum,
-                2,
-                1.6,
-                Sprite.randomDirection(),
-                false, // flipY
-                Sprite.choice([images.deadtree,images.deadtree2])
-              )
-            );
-          } else {
-            this.map[tempRowNum].push(
-              new Wall(
-                column,
-                tempRowNum,
-                2,
-                1.2,
-                Sprite.randomDirection(),
-                false, // flipY
-                Sprite.choice([images.stump,images.stump2])
-              )
-            );
-          }
-          break;
-        case "g":
-          this.map[tempRowNum].push(
-            new TallGrass(
-              column,
-              tempRowNum,
-              1,
-              Sprite.randomDirection(),
-              // tallgrass class can't flipY
-              images.tallgrass
-            )
-          );
-          //this.row[tempRowNum].[this.objects.length-1].growTimer;
-          break;
-        case "G":
-          this.map[tempRowNum].push(
-            new Wall(
-              column,
-              tempRowNum,
-              0,
-              1.2,
-              1,
-              false, // flipY
-              images.gravestone
-            )
-          );
-          break;
-        case "0": // goto current world, level 0
-        case "1": // goto current world, level 1
-        case "2": // goto current world, level 2
-        case "3": // goto current world, level 3
-        case "4": // goto current world, level 4
-        case "5": // goto current world, level 5
-        case "6": // goto current world, level 6
-        case "7": // goto current world, level 7
-        case "8": // goto current world, level 8
-        case "9": // goto current world, level 9
-          this.map[tempRowNum].push(
-            new Door(
-              column,
-              tempRowNum,
-              this.worldNumber,
-              parseInt(newRowString.charAt(column))
-            )
-          );
-          break;
-        case "⓪": // warp to world 0-0
-          this.map[tempRowNum].push(new Door(column, tempRowNum, 0, 0));
-          break;
-        case "①": // warp to world 1-0
-          this.map[tempRowNum].push(new Door(column, tempRowNum, 1, 0));
-          break;
-        case "②": // warp to world 2-0
-          this.map[tempRowNum].push(new Door(column, tempRowNum, 2, 0));
-          break;
-        case "③": // warp to world 3-0
-          this.map[tempRowNum].push(new Door(column, tempRowNum, 3, 0));
-          break;
 
-        default:
-          this.map[tempRowNum].push(false);
+            this.map[tempRowNum].push(
+              new Wall(
+                column,
+                tempRowNum,
+                2,
+                2.45,
+                Sprite.randomDirection(),
+                false, // flipY
+
+                Sprite.choice([images.deadtree,images.deadtree2])
+
+              )
+            );
+            break;
+          case "t":
+            this.map[tempRowNum].push(
+              new Wall(
+                column,
+                tempRowNum,
+                2,
+                1.55,
+                Sprite.randomDirection(),
+                false, // flipY
+
+                Sprite.choice([images.stump,images.stump2])
+
+              )
+            );
+            break;
+          case "+":
+            if (random() < 0.75) { // 75%
+              this.map[tempRowNum].push(
+                new Wall(
+                  column,
+                  tempRowNum,
+                  2,
+                  1.6,
+                  Sprite.randomDirection(),
+                  false, // flipY
+                  Sprite.choice([images.deadtree,images.deadtree2])
+                )
+              );
+            } else { // 25%
+              this.map[tempRowNum].push(
+                new Wall(
+                  column,
+                  tempRowNum,
+                  2,
+                  1.2,
+                  Sprite.randomDirection(),
+                  false, // flipY
+                  Sprite.choice([images.stump,images.stump2])
+                )
+              );
+            }
+            break;
+          case "g":
+            this.map[tempRowNum].push(
+              new TallGrass(
+                column,
+                tempRowNum,
+                1,
+                Sprite.randomDirection(),
+                // tallgrass class can't flipY
+                images.tallgrass
+              )
+            );
+            //this.row[tempRowNum].[this.objects.length-1].growTimer;
+            break;
+          case "G":
+            this.map[tempRowNum].push(
+              new Wall(
+                column,
+                tempRowNum,
+                0,
+                1.2,
+                1,
+                false, // flipY
+                images.gravestone
+              )
+            );
+            break;
+          case "0": // goto current world, level 0
+          case "1": // goto current world, level 1
+          case "2": // goto current world, level 2
+          case "3": // goto current world, level 3
+          case "4": // goto current world, level 4
+          case "5": // goto current world, level 5
+          case "6": // goto current world, level 6
+          case "7": // goto current world, level 7
+          case "8": // goto current world, level 8
+          case "9": // goto current world, level 9
+            this.map[tempRowNum].push(
+              new Door(
+                column,
+                tempRowNum,
+                this.worldNumber,
+                parseInt(newRowString.charAt(column))
+              )
+            );
+            break;
+          case "⓪": // warp to world 0-0
+            this.map[tempRowNum].push(new Door(column, tempRowNum, 0, 0));
+            break;
+          case "①": // warp to world 1-0
+            this.map[tempRowNum].push(new Door(column, tempRowNum, 1, 0));
+            break;
+          case "②": // warp to world 2-0
+            this.map[tempRowNum].push(new Door(column, tempRowNum, 2, 0));
+            break;
+          case "③": // warp to world 3-0
+            this.map[tempRowNum].push(new Door(column, tempRowNum, 3, 0));
+            break;
+
+          default:
+            this.map[tempRowNum].push(false);
+        }
       }
     }
-  }
 
   static buildLevels() {
     world = [];
@@ -275,20 +315,25 @@ class Level {
         levelNumber++
       ) {
         // iterate thru levels
-        world[worldNumber][levelNumber] = new Level(worldNumber, levelNumber);
-        for (let row = 0; row < maps[worldNumber][levelNumber].length; row++) {
+        let bgTile;
+        if(maps[worldNumber][levelNumber].bgImage == "grass"){
+          bgTile = images.grassbg
+        }else if(maps[worldNumber][levelNumber].bgImage == "sand"){
+          bgTile = images.sandbg
+        }else if(maps[worldNumber][levelNumber].bgImage == "cave"){
+          bgTile = images.cavebg
+        }else{
+          bgTile = images.grassbg
+        }
+        world[worldNumber][levelNumber] = new Level(worldNumber, levelNumber,maps[worldNumber][levelNumber].showTitleScreen,bgTile);
+        for (let row = 0; row < maps[worldNumber][levelNumber].map.length; row++) {
           // iterate thru rows
           world[worldNumber][levelNumber].addRow(
-            maps[worldNumber][levelNumber][row]
+            maps[worldNumber][levelNumber].map[row]
           );
         }
       }
     }
-    world[0][1].backgroundTile = images.cavebg;
-    world[0][2].backgroundTile = images.sandbg;
-    world[0][3].backgroundTile = images.cavebg;
-    world[0][8].backgroundTile = images.sandbg;
-
     return world;
   }
 

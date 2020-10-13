@@ -19,6 +19,7 @@ let gameState = "titlescreen";
 let myFont;
 let startButton;
 
+
 function preload() {
 
   images.roof = loadImage(
@@ -60,6 +61,7 @@ function preload() {
   images.deadtree2 = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/spookytree03.png"
   );
+  images.deadtree2 = loadImage("https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2Fspookytree3.png?v=1573012947346");
   images.tallgrass = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/tallgrass02.png"
   );
@@ -95,6 +97,7 @@ function preload() {
   images.water2 = loadImage(
     "https://raw.githubusercontent.com/ohiofi/game-maps/master/images/water2.png"
   );
+
   myFont = loadFont(
     "https://cdn.glitch.com/f008b3ae-5d6b-4474-9377-414661c88ac7%2FpressStart.ttf?v=1571872754647"
   );
