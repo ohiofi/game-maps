@@ -36,31 +36,31 @@ let maps = [
         showTitleScreen:true,
         bgImage:"grass", //either "grass", "sand", "cave"
         map:[
-          "rrcccccccccccc+t+ ++T++  +++ ++T+ T+++ ++T+ ^^^==========================",
-          "r♀      gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg             T",
-          "r     k   h    r         +G   G  gGgg G+g   ===  pppppp            tTTtTt",
-          "r t  t t k  t      h           g            =7=  p        TttT   tTTtTT",
-          "r   t  gt  t+ g  r      + G  gG   G  + ppppppppppp tT    TtTt   TTtTtTTtTT",
-          " r   t T    ++  t          +    +  T  G   ^^^ gp ttT   ttTTtT  TtTTtTT",
-          "r  t    t  gt g          g+gg G  +Gg  +g ^^^^^ p TtTt    ^^^   tTtTTtTT",
-          "r t t^   +   gT               g+     +  g=|=|= p  t tT   ^^^    tTt",
-          "r   ^^^     gt r      gTg  + gG + G     t===== p tTT     ===    TTtTt",
-          "r  ^^^^^   ^^^         ^^^              t==6== p  TtT    =8=   TtTt",
-          "r  =|=|=  ^^^^^r     g^^^^^    ^^^     gr  ppppp   tTTt  pp T   TtTT",
-          "r T=====  =====    rr =====rg ^^^^^        +gg pg  Tt  ppp tTTT   tTtTtwwwww",
-          "r T=1===  ==2==r  rccc==4==T  =====g   t    t  p  TTtTtp  TTtTTtT   twww",
-          "r   ppppppppppppprcc3ccrp     ==5==          T pp grT  p g         www",
-          "gccccccccccccccgpp ggg  pgg   tgpt Tgt  ppppt   p  TTTtp  TtTTtTwwwwTtTT",
-          "t   g  T         ppppppppppp+tppppppppppp tpptggpppppppp tTtT+wwwtTTtT",
-          " t           T    gg   gr  pppp++g  t   tg gpppppgtgtgtTtTTtwwwTtTtT",
-          "t         k               t+g t gt gtgt  gT  +   T   TtT+TwwwTTtTtTTtTtTTtT",
-          " Tg     Tg     h        tg  +tg t gT    gT     Tg T+T TtwwwTtTtTtTtT+T T",
-          " r          h               gt    +t gt  gtT g+ Tg tTTwwwTTtTtT+T TtTTtT",
-          "T              k  Tg   gg   Tg       t+           gTwwwTtTTtTtTtTtTTtTtT",
-          " t   ♀       gg                     T       T     twwtTTtT tTTtTtTtTTtT",
-          " gt         T                  tg T  gT   T      TwwTtTTtTtTTtTtTtTTtT",
-          "g  tcccc ccc ccccc   gTrrg  t    t   +++T      gTwwTtTtTTtTtTTtTtTTtTTtT",
-          " g  TrrTT    T +T cccc   +++ +++t +++   +++++T++wwtT+T TT+T TtTTtTTT tTTT"]
+          "     grrcccccccccccc+t+ ++T++  +++ ++T+ T+++ ++T+ ^^^==========================    ", 
+          "g    gr       gT  ++   +Tg   ++T  +    + gT +  gr+^^^ggggggggg             T       ", 
+          " gT TTT     k   h    r         +G   G  gGgg G+g   ===  pppppp            tTTtTt    ", 
+          " gTTTgr t  t t k  t      h           g            =7=  p        TttT   tTTtTT      ", 
+          "   gg r   t  gt  t+ g  r      + G  gG   G  + ppppppppppp tT    TtTt   TTtTtTTtTT   ", 
+          "   Tg  r   t T    ++  t          +    +  T  G   ^^^ gp ttT   ttTTtT  TtTTtTT       ", 
+          " g TT r  t    t  gt g          g+gg G  +Gg  +g ^^^^^ p TtTt    ^^^   tTtTTtTT      ", 
+          "  ggT r t t^   +   gT               g+     +  g=|=|= p  t tT   ^^^    tTt          ", 
+          "   gTTr   ^^^     gt r      gTg  + gG + G     t===== p tTT     ===    TTtTt        ", 
+          "    gTT  ^^^^^   ^^^         ^^^              t==6== p  TtT    =8=   TtTt          ", 
+          "  ggggT  =|=|=  ^^^^^r     g^^^^^    ^^^     gr  ppppp   tTTt  pp T   TtTT         ", 
+          " Tg g T T=====  =====    rr =====rg ^^^^^        +gg pg  Tt  ppp tTTT   tTtTtwwwww ", 
+          " T  ggr T=1===  ==2==r  rccc==4==T  =====g   t    t  p  TTtTtp  TTtTTtT   twww     ", 
+          " T T gr   ppppppppppppprcc3ccrp     ==5==          T pp grT  p g         www       ", 
+          " TTT  gccccccccccccccgpp ggg  pgg   tgpt Tgt  ppppt   p  TTTtp  TtTTtTwwwwTtTT     ", 
+          "   TTTt   g  T         ppppppppppp+tppppppppppp tpptggpppppppp tTtT+wwwtTTtT       ", 
+          "ggg T  t           T    gg   gr  pppp++g  t   tg gpppppgtgtgtTtTTtwwwTtTtT         ", 
+          "ppggg t         k               t+g t gt gtgt  gT  +   T   TtT+TwwwTTtTtTTtTtTTtT  ", 
+          "ggppgggTg     Tg     h        tg  +tg t gT    gT     Tg T+T TtwwwTtTtTtTtT+T T     ", 
+          " ggpppgr          h               gt    +t gt  gtT g+ Tg tTTwwwTTtTtT+T TtTTtT     ", 
+          "TTgggpp7              k  Tg   gg   Tg       t+           gTwwwTtTTtTtTtTtTTtTtT    ", 
+          " T Tgggt   ♀       gg                     T       T     twwtTTtT tTTtTtTtTTtT      ", 
+          "  TTTTTgt         T                  tg T  gT   T      TwwTtTTtTtTTtTtTtTTtT       ", 
+          "  T   g  tcccc ccc ccccc   gTrrg  t    t   +++T      gTwwTtTtTTtTtTTtTtTTtTTtT     ", 
+          "       g  TrrTT    T +T cccc   +++ +++t +++   +++++T++wwtT+T TT+T TtTTtTTT tTTT    "]
       },
       // world 0 level 1, cave background tile
       {
@@ -258,14 +258,54 @@ let maps = [
       // world 0 level 7
       {
       showTitleScreen:true,
-      bgImage:"sand", //either "grass", "sand", "cave"
-      map:[]
+      bgImage:"grass", //either "grass", "sand", "cave"
+      map:[
+        "gggggggggggggggggggggggggggggggggggggggggggggggggT ", 
+        "gggggggggggggggg+gggTTggggggTTgggg+ggggggggTgggggg ", 
+        "ggggTTggggTgggggggTTTTTggTTTggTggggTgtggTTTTgggTgT ", 
+        "gggggTTgggTTgTTgTTTTggTgTTgTgTTTTTTTTgTTTTTTTggggT ", 
+        "ggTgggTTggTg+gTTggg+gtTTTTTTgtggTgggTgtgggggTTggTT ", 
+        "ggTTgggTTTTgggtgggtggggTTggggg+ggTggTgg+gggggtgggg ", 
+        "gggggggggTggT+gg+gTgTgTTTtTgTTTgTTgTTTgggTTTTggtgg ", 
+        "gggggggg+gg+ggTTgTgggtgggggtg+gggttgg+gggTTgTggTgT ", 
+        "ggTTTgggggtTgggggggg+ggggggggggggggggggTggTTTgTTgT ", 
+        "ggggTgTTTTgT+ggggggggggtggggppppppgggTgTTTTTTTTTgT ", 
+        "gggTTTTggTgTggggtggggggggggppggggppp+TTgggggTggggg ", 
+        "gggTTTTTgTggggggggggrgggppppggrggggpgTgTggpggggggg ", 
+        "gpgpgggTggTTgggggggggggpppgggggggtgp♀0gppppppppppp ", 
+        "ppppppgpppgTgpgppppgggppggtgggtggggpptppgpgggpggpp ", 
+        "gggTgpppgpp8pppptgpppppggggggggggggggTgTgTTTTggTgg ", 
+        "ggTTTgggTTTtggggggggggggggtggggggggg+ggTTTggTTgTTg ", 
+        "gTTgTTgTTgt+gggggrgggTgtggggtgggtggg+gggTTgggTTTTg ", 
+        "TTgggTTTgggg+TtTTggtrgTggTTggTTTgTgTTTgggTTgTTTTgg ", 
+        "Tgg+ggTgg+ggggggggggggggggggtggTgggTggTgggTTTggggT ", 
+        "TTggTgtgggTtgTTggTTggtgTTggggggTTggTtgTgT+gggggggg ", 
+        "gTTggTgtgTTgggTTggTTggTTgg+gTTgg+gTTggTggg+gggTggg ", 
+        "ggTTggggTTggTggggtgTTTTTgggTTTTgggTgggTTgTTTggTgTg ", 
+        "gggggggTTgtgTTTgTgggggggTgTTggTTTTTggggTTTTgggTgTT ", 
+        "ggg+ggTTgggtggTgggggTTTTgTTggggggTggggggggggggTggT ", 
+        "gggggggggg+gggTTggTTTgggTTggggTTTTTTgggggTTTTggggg ", 
+        "gggggggggggggggTTTTTgggggggggggggggggggggggggggggg "]
       },
       // world 0 level 8
       {
       showTitleScreen:true,
-      bgImage:"sand", //either "grass", "sand", "cave"
-      map:[]
+      bgImage:"grass", //either "grass", "sand", "cave"
+      map:[
+        "gggggggTTTgggTTggggggg", 
+        "gTTgggTTgTgTTTTTTTgTTg", 
+        "TTTggggtggggggtggTTTgT", 
+        "ggTTgTTggTTTTttTTgggTT", 
+        "gggggTtgT    TgggggTTg", 
+        "TTTgtggT  ggg TgggTTgg", 
+        "ggTgggT  +  gg TTgpppp", 
+        "ggTTgTTg G    ♀7pppgpp", 
+        "gTTgTTgT  ggg pppTTggg", 
+        "gTggTgggT gg TTTTTTTgg", 
+        "TTggggTggTTTTggggggTTg", 
+        "ggTTgTTgtgttggTTggggTg", 
+        "ggggTgggggTTTggTTTTggg", 
+        "TgggTTgggTTTTggTTgTTgg"]
       },
       // world 0 level 9
       {
