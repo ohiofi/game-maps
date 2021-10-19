@@ -310,8 +310,30 @@ let maps = [
       // world 0 level 9
       {
       showTitleScreen:true,
-      bgImage:"sand", //either "grass", "sand", "cave"
-      map:[]
+      bgImage:"grass", //either "grass", "sand", "cave"
+      map:["rrrrrrrrrrrrrrrrrrrrrGGGpppppp=gggggTgggg=gggg==rrwwwwwwwwww", 
+      "rrrrrrrrrrrrrrrrrrrrrGGGp+p+pp=TThggggggg=gggg==rrwwwwwwwwww", 
+      "rr①GGpp+ppppppp+gggggGGGpppppp=gThkgggTgg=ggtg==rrwwwwwwwwww", 
+      "rrGGGpppppp+ppppggtggGGG+ppppp=gTgghggggg=gggg==rrwwwwwwwwww", 
+      "rrGGGppwwwpppppptgrggGGGpp+ppp=ggTghggggg=gtgg==rrwwwwwwwwww", 
+      "rrGGGp+wwwppp+ppgggggGGGpppppp=gggggkhggg=gggg==rrwwwwwwwwww", 
+      "rrGGGppwwwpppppprggggGGGp+pp+p=ggTggghggg=ggtg==rrwwwwwwwwww", 
+      "rrGGGppwwwppp++pgggtgGGGpppppp=gggggggkhg=gggg==rrwwwwwwwwww", 
+      "rrGGG+pwwwp++pppgggggGGGpp+ppp=gggggggghg=gtgg==rrwwwwwwwwww", 
+      "rrGGGppwwwppppppgtgggGGGpppp+p=gggTgTgggg=gg====rrwwwwwwwwww", 
+      "rrGGGp+wwwwwwwwwgggggGGGpppppp==================rrrrrrrrrrrr", 
+      "rr①GGppwwwwwwwwwggtggGGGpppppp==================rrrrrrrrrr♀r", 
+      "rrGGGppwwwwwwwwwggggtGGGpppppp==================rrrrrrrrrrrr", 
+      "rrGGG+pwwwppppppgggrgGGGpp+ppp=gggggggggg=gg====rrwwwwwwwwww", 
+      "rrGGGppwwwp+ppppgggggGGGpppppp=ggTggggggg=gggg==rrwwwwwwwwww", 
+      "rrGGGppwwwppppppgrgggGGGpp+ppp=ggggggTghg=gtgg==rrwwwwwwwwww", 
+      "rrGGGp+wwwpppp+pgtgggGGGpppppp=Tggggggkhg=gggg==rrwwwwwwwwww", 
+      "rrGGGppwwwppppppgggtgGGGpppppp=TgTggghggg=ggtg==rrwwwwwwwwww", 
+      "rrGGG+pwwwppppppgggggGGGpp+ppp=Tggggkhggg=gggg==rrwwwwwwwwww", 
+      "rrGGGpppp+pp+pppgrtgrGGG+ppp+p=gggghggggg=gtgg==rrwwwwwwwwww", 
+      "rr①GGpp+ppppppppgggggGGGpppppp=gggkhggggg=gggg==rrwwwwwwwwww", 
+      "rrrrrrrrrrrrrrrrrrrrrGGG+ppppp=gghggggTTg=ggtg==rrwwwwwwwwww", 
+      "rrrrrrrrrrrrrrrrrrrrrGGGpp+ppp=gghgggTggg=gggg==rrwwwwwwwwww"]
       }
 
 
