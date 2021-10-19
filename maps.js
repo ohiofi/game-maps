@@ -545,8 +545,51 @@ let maps = [
       // world 1 level 6
     {
   showTitleScreen:true,
-  bgImage:"sand", //either "grass", "sand", "cave"
-  map:[]
+  bgImage:"cave", //either "grass", "sand", "cave"
+  map:
+      ["===================================================================", 
+      "=                                     g     g g gg  ggg gggggggggt=", 
+      "= =================================================================", 
+      "= =   =   =   =gggggggggggggggggggggggggggggggggggggggggggggggggggg", 
+      "= = = = = = = =gggggggggggggggggggggggggggggggggggggggggggggggggggg", 
+      "= = = = = = = =gg                                               1gg", 
+      "= = = = = = = =gg                                                gg", 
+      "= = = = = = = =gg                                                gg", 
+      "= = = = = = = =gg                                                gg", 
+      "= = = = = = = =gg                                                gg", 
+      "= = = = = = = =gg                                                gg", 
+      "= = = = = = = =gggggggggggggggggggggggggg                        gg", 
+      "= = =   =   = gggggggggggggggggggggggggggg                       gg", 
+      "= = ====================================ggggggggggggggggggg      gg", 
+      "= =                =                   =ggggggggggggggggggg      gg", 
+      "= ================ = ================= ==================gg      gg", 
+      "= =                = =               =                  =gg      gg", 
+      "= = ================ = ====== ==== = ================== =gg      gg", 
+      "= =                = = =    = == = = =                = =gg      gg", 
+      "= ================ = = = ==== ==?= = = ============== = =gg      gg", 
+      "= =                = = =    = == = = =              = = =gg      gg", 
+      "= = ================ = === == == === ============== = = =gg      gg", 
+      "= =                  =                              = = =gg      gg", 
+      "= ========================== ======= ================ = =gg      gg", 
+      "=                          =         =                = =gg      gg", 
+      "======================== = = ======= = ================ =gg      gg", 
+      "=   =   =   =            = = =     = =                  =gg      gg", 
+      "= = = = = = = ============ = === ========================gg      gg", 
+      "= = = = = = = =          =     = =   =ggggggggggggggggggggg     ggg", 
+      "= = = = = =   = =========== == = = ===ggggggggggggggggggggg      gg", 
+      "= = = =   ===== =ggggggggg=  =     =ggg                          gg", 
+      "= =   =====     =ggggggggg== =======gg                           gg", 
+      "= =====     =====gg     ggg===ggggggg                            gg", 
+      "=       =====gggggg      ggggggggggg                             gg", 
+      "=========ggggggggg         ggg                                   gg", 
+      "ggggggggggggggg                                                  gg", 
+      "ggggggggg                                                        gg", 
+      "gg                                                               gg", 
+      "gg                                                               gg", 
+      "gg                                                               gg", 
+      "gg                                                               gg", 
+      "ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg", 
+      "ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"]
 },
 
       // world 1 level 7
